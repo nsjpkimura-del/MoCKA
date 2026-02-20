@@ -1,0 +1,8 @@
+﻿{
+    "release_tag":  "OFFICIAL_PHASE12_v1",
+    "commit":  "1d628b6caef199309db9ec3ee804a46a02a8264c",
+    "final_chain_hash":  "33a71502fde5540eed1939a017410e137e580c583477129313e679096e453f39",
+    "verify_pack_sha256":  "6CD710498943F83A91718918D1F7FF6FC727F3B7FC4BE6D96A9C1CD9E1C296AA",
+    "key_id":  "ed25519_20260220_01",
+    "policy_version":  "PHASE13A_KEY_POLICY_v1_0"
+}

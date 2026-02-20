@@ -1,28 +1,41 @@
-﻿# Python virtual env
-.venv/
-.venv311/
-venv/
+﻿# secrets and keys
+secrets/
+keys/secret/
+**/*.key
+**/*.pem
+**/*seed*
+**/*seckey*
+
+# env
+.env
+*.env
+.env.*
+
+# backups
+*.bak
+*.backup
+*.tmp
+
+# common
+.DS_Store
+node_modules/
 __pycache__/
 *.pyc
+# virtualenv
+.venv/
+venv/
+app/.venv*/
+**/.venv*/
 
-# Secrets and keys
-secrets/
-keys/
-*.pem
-*.key
+# backups
+*.bak*
+*.quarantine_*
+*.backup
 
-# OS
-Thumbs.db
-desktop.ini
-.DS_Store
-
-# Logs
+# logs
+logs/
+**/logs/
 *.log
 
-# Backup
-*.bak_*
-*.quarantine_*
-
-# Build
-dist/
-build/
+# windows noise
+desktop.ini
