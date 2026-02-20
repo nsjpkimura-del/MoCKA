@@ -1,0 +1,12 @@
+﻿{
+  "phase": "13-A",
+  "status": "externally_verified",
+  "git_commit": "1957b9c419d4f71f2f324f612b9bdf576bac64f3",
+  "git_tag": "PHASE13A_SEALED",
+  "final_chain_hash": "e0630325c98603503ac6f2fee954f150afc55b42294f8b15a2130bae62f6f511",
+  "verify_pack_sha256": "6CD710498943F83A91718918D1F7FF6FC727F3B7FC4BE6D96A9C1CD9E1C296AA",
+  "seal_values_sha256": "18F1D121E1EDD3D5DFA929CB45B920D4345CEF92AA7718AB781EEA1C6B0342E7",
+  "verification_script": "verify_phase13b.ps1",
+  "verification_result": "OK",
+  "verified_at_utc": "2026-02-20T06:42:21Z"
+}
