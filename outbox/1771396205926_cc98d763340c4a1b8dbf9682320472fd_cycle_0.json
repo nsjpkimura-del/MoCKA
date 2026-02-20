@@ -1,0 +1,36 @@
+{
+  "schema": "mocka.outbox.v1",
+  "run_id": "cc98d763340c4a1b8dbf9682320472fd",
+  "ts_ms": 1771396205926,
+  "stage": "cycle_0",
+  "ok": true,
+  "summary": "ai_ok",
+  "data": {
+    "task_text": "...",
+    "task_sha256": "ab5df625bc76dbd4e163bed2dd888df828f90159bb93556525c31821b6541d46",
+    "cycle_index": 0,
+    "env": {
+      "MOCKA_ALLOW_TYPE": "",
+      "MOCKA_ALLOW_KEY": "",
+      "MOCKA_ALLOW_AI": "",
+      "MOCKA_PROVIDER": "",
+      "MOCKA_MODEL": "",
+      "MOCKA_CYCLES": "N",
+      "MOCKA_TASK": "..."
+    },
+    "allowed": {
+      "type": false,
+      "key": false,
+      "ai": false
+    },
+    "timing": {
+      "start_ms": 1771396205926,
+      "end_ms": 1771396205926,
+      "elapsed_ms": 0
+    },
+    "ai_provider": "stub",
+    "ai_model": "stub",
+    "ai_text": "[stub] ..."
+  },
+  "error": null
+}

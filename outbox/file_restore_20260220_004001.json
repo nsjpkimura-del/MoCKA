@@ -1,0 +1,20 @@
+{
+    "schema_version":  "file_restore_v1",
+    "event_type":  "file_restore",
+    "timestamp":  "20260220_004001",
+    "note":  "phase11.13 reversible test",
+    "target_file":  "gateway_audit_search.py",
+    "target":  {
+                   "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\gateway_audit_search.py",
+                   "file_name":  "gateway_audit_search.py"
+               },
+    "restore_source":  {
+                           "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260220_003426\\gateway_audit_search.py",
+                           "file_name":  "gateway_audit_search.py"
+                       },
+    "hash":  {
+                 "sha256_source":  "a398e49eafd12abafb085d7002bb280e19166e5163cf41245cf4ed5d6279f0e0",
+                 "sha256_after":  "a398e49eafd12abafb085d7002bb280e19166e5163cf41245cf4ed5d6279f0e0"
+             },
+    "restore_verified":  true
+}

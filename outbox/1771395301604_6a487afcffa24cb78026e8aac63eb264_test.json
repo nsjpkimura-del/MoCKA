@@ -1,0 +1,12 @@
+{
+  "schema": "mocka.outbox.v1",
+  "run_id": "6a487afcffa24cb78026e8aac63eb264",
+  "ts_ms": 1771395301604,
+  "stage": "test",
+  "ok": true,
+  "summary": "manual_test",
+  "data": {
+    "message": "first emission"
+  },
+  "error": null
+}

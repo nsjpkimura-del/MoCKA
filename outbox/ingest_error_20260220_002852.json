@@ -1,0 +1,104 @@
+{
+  "schema_version": "ingest_error_v1",
+  "event_type": "ingest_error",
+  "timestamp": "20260220_002852",
+  "db": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\db\\knowledge.db",
+  "outbox": "C:\\Users\\sirok\\MoCKA\\outbox",
+  "stats": {
+    "inserted": 0,
+    "duplicate": 2,
+    "skip_schema": 0,
+    "skip_invalid": 0,
+    "parse_error": 17,
+    "io_error": 0,
+    "db_error": 0,
+    "other_error": 0
+  },
+  "errors": [
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173037.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173105.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173134.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173414.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173743.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173845.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173849.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_174349.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_174514.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_174918.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_175905.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_180022.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_181144.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_181804.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_182042.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_restore_20260219_173414.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    },
+    {
+      "file": "C:\\Users\\sirok\\MoCKA\\outbox\\file_restore_20260219_173845.json",
+      "kind": "parse_error",
+      "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    }
+  ]
+}

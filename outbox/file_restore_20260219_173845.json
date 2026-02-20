@@ -1,0 +1,16 @@
+﻿{
+    "event_type":  "file_restore",
+    "timestamp":  "20260219_174134",
+    "restore_from_timestamp":  "20260219_173845",
+    "target":  {
+                   "sha256_before":  "e0084a049f4b140bd3a9fc02c2d8e028a3aad57ed313c9e76ff72883bc4d50fa",
+                   "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\gateway_searchget.py",
+                   "sha256_after":  "4bb87f069d524bb734c713149db3feba680cdb8898de1b3988221da91ab0d52c",
+                   "file_name":  "gateway_searchget.py"
+               },
+    "source":  {
+                   "backup_dir":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_173845",
+                   "backup_file":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_173845\\gateway_searchget.py",
+                   "sha256":  "4bb87f069d524bb734c713149db3feba680cdb8898de1b3988221da91ab0d52c"
+               }
+}

@@ -1,0 +1,27 @@
+﻿{
+    "ts_local":  "2026-02-19T10:24:30.1886395+09:00",
+    "ts_utc":  "2026-02-19T01:24:30.1886395Z",
+    "kind":  "health_summary",
+    "enable_network":  false,
+    "mode":  "NORMAL",
+    "key_status":  [
+                       {
+                           "name":  "openai",
+                           "present":  true,
+                           "masked":  "sk-p...Q9IA"
+                       },
+                       {
+                           "name":  "github",
+                           "present":  false,
+                           "masked":  null
+                       },
+                       {
+                           "name":  "firebase",
+                           "present":  false,
+                           "masked":  null
+                       }
+                   ],
+    "network_checks":  [
+
+                       ]
+}

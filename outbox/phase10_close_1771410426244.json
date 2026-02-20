@@ -1,0 +1,18 @@
+﻿{
+    "ts_ms":  1771410426244,
+    "version":  "v3.3",
+    "artifacts":  {
+                      "proof_fixed":  "C:\\Users\\sirok\\MoCKA\\outbox\\integrity_proof_v33_fixed.json",
+                      "decision_sha256":  "DBDFC8B505740E27CD8142882E7F9C096DD1203E68A4ABFB90DF9D7676116DF3",
+                      "decision":  "C:\\Users\\sirok\\MoCKA\\outbox\\infield_commit_v33_1771407391436.json"
+                  },
+    "kind":  "phase10_close",
+    "claims":  [
+                   "v3.3 adopted",
+                   "persisted in infield",
+                   "load tested",
+                   "integrity proven by sha256",
+                   "proof recorded"
+               ],
+    "status":  "closed"
+}

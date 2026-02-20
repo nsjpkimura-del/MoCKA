@@ -1,0 +1,22 @@
+{
+  "utc": "2026-02-16T01:15:57.070528+00:00",
+  "cwd": "C:\\WINDOWS\\system32",
+  "executable": "C:\\Users\\sirok\\MoCKA\\app\\.venv311\\Scripts\\python.exe",
+  "argv": [
+    "C:\\Users\\sirok\\MoCKA\\app\\src\\runner\\env_probe.py"
+  ],
+  "sys_path": [
+    "C:\\Users\\sirok\\MoCKA\\app\\src\\runner",
+    "C:\\Users\\sirok\\AppData\\Local\\Programs\\Python\\Python311\\python311.zip",
+    "C:\\Users\\sirok\\AppData\\Local\\Programs\\Python\\Python311\\DLLs",
+    "C:\\Users\\sirok\\AppData\\Local\\Programs\\Python\\Python311\\Lib",
+    "C:\\Users\\sirok\\AppData\\Local\\Programs\\Python\\Python311",
+    "C:\\Users\\sirok\\MoCKA\\app\\.venv311",
+    "C:\\Users\\sirok\\MoCKA\\app\\.venv311\\Lib\\site-packages"
+  ],
+  "env": {
+    "MOCKA_HOME": null,
+    "MOCKA_INFIELD": null,
+    "MOCKA_DB": null
+  }
+}

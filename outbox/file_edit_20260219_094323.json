@@ -1,0 +1,19 @@
+{
+    "schema_version":  "file_edit_v1",
+    "event_type":  "file_edit",
+    "timestamp":  "20260219_094323",
+    "note":  "add schema_version contract",
+    "target_file":  "gateway_audit_search.py",
+    "target":  {
+                   "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\gateway_audit_search.py",
+                   "file_name":  "gateway_audit_search.py"
+               },
+    "backup":  {
+                   "dir":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_094323",
+                   "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_094323\\gateway_audit_search.py"
+               },
+    "hash":  {
+                 "sha256_before":  "546d845879e7601ade79dfd0ce2e1fc35d9fe3eff57673b6021d961c96e2954e",
+                 "sha256_after":  "546d845879e7601ade79dfd0ce2e1fc35d9fe3eff57673b6021d961c96e2954e"
+             }
+}

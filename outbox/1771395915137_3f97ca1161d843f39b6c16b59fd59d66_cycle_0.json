@@ -1,0 +1,31 @@
+{
+  "schema": "mocka.outbox.v1",
+  "run_id": "3f97ca1161d843f39b6c16b59fd59d66",
+  "ts_ms": 1771395915137,
+  "stage": "cycle_0",
+  "ok": true,
+  "summary": "ai_ok",
+  "data": {
+    "task_text": "outbox schema upgrade test",
+    "task_sha256": "76dfce435e38028d78146b00a9286f9229e628dfe44847fe5fb01cd1012610a0",
+    "cycle_index": 0,
+    "env": {
+      "MOCKA_ALLOW_TYPE": "",
+      "MOCKA_ALLOW_KEY": "",
+      "MOCKA_ALLOW_AI": "",
+      "MOCKA_PROVIDER": "",
+      "MOCKA_MODEL": "",
+      "MOCKA_CYCLES": "2",
+      "MOCKA_TASK": "outbox schema upgrade test"
+    },
+    "timing": {
+      "start_ms": 1771395915137,
+      "end_ms": 1771395915137,
+      "elapsed_ms": 0
+    },
+    "ai_provider": "stub",
+    "ai_model": "stub",
+    "ai_text": "[stub] outbox schema upgrade test"
+  },
+  "error": null
+}

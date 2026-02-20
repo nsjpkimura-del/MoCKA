@@ -1,0 +1,23 @@
+{
+  "kind": "search",
+  "search_id": "2f26320fb8059a489a07ffa0cf195ec9df572123afa6430d964345a7e4bcb2eb",
+  "timestamp": "2026-02-19T03:14:05.144715+00:00",
+  "query": "knowledge",
+  "limit": 200,
+  "hits": 1,
+  "ids": [
+    "2bfb45a6d2e9aa1d154016f3d90cc4a6ec2d01063b7ced15a595cbb1105f0109"
+  ],
+  "xlsx_file": "search_2f26320fb8059a489a07ffa0cf195ec9df572123afa6430d964345a7e4bcb2eb.xlsx",
+  "xlsx_schema": [
+    "id",
+    "timestamp",
+    "source",
+    "category",
+    "summary",
+    "raw_preview",
+    "tags",
+    "hash"
+  ],
+  "ranking": "bm25(events_fts), timestamp desc"
+}

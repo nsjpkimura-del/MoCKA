@@ -1,0 +1,7 @@
+﻿{
+    "meaning":  "If this sha256 changes, the decision content changed.",
+    "sha256":  "DBDFC8B505740E27CD8142882E7F9C096DD1203E68A4ABFB90DF9D7676116DF3",
+    "target":  "C:\\Users\\sirok\\MoCKA\\outbox\\infield_commit_v33_1771407391436.json",
+    "ts_ms":  1771410361040,
+    "kind":  "integrity_proof"
+}

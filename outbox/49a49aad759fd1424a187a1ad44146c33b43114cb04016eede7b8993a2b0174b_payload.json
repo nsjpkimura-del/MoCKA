@@ -1,0 +1,10 @@
+{
+  "id": "49a49aad759fd1424a187a1ad44146c33b43114cb04016eede7b8993a2b0174b",
+  "timestamp": "2026-02-19T02:39:15.913999+00:00",
+  "source": "proof_unify",
+  "category": "phase11",
+  "summary": "evidence unified",
+  "raw_text": "save evidence json/proof json",
+  "tags": "phase11,evidence",
+  "hash": "85b556de7c1a5c75cbca80ce6d4090611de9000eac8aa3fd24e820c213ec997d"
+}

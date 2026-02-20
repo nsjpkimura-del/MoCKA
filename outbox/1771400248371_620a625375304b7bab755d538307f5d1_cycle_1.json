@@ -1,0 +1,72 @@
+{
+  "schema": "mocka.outbox.v1",
+  "run_id": "620a625375304b7bab755d538307f5d1",
+  "ts_ms": 1771400248371,
+  "stage": "cycle_1",
+  "ok": false,
+  "summary": "exception",
+  "data": {
+    "task_text": "self repair test",
+    "task_sha256": "04a9bd273fbdb638ab598b67a8570a2b90aaf6fe905c96406368a5ba85bf0990",
+    "cycle_index": 1,
+    "env": {
+      "MOCKA_ALLOW_TYPE": null,
+      "MOCKA_ALLOW_KEY": null,
+      "MOCKA_ALLOW_AI": null,
+      "MOCKA_PROVIDER": null,
+      "MOCKA_MODEL": null,
+      "MOCKA_CYCLES": "2",
+      "MOCKA_TASK": "self repair test"
+    },
+    "allowed": {
+      "type": false,
+      "key": false,
+      "ai": false
+    },
+    "timing": {
+      "start_ms": 1771400248371,
+      "end_ms": 1771400248380,
+      "elapsed_ms": 9
+    },
+    "memory_ref": {
+      "prev": {
+        "run_id": "84dbc4d22f8f4fffb9ec4b9687077066",
+        "stage": "cycle_0",
+        "ok": false,
+        "summary": "exception",
+        "ts_ms": 1771400248347,
+        "elapsed_ms": 14,
+        "allowed": {
+          "type": false,
+          "key": false,
+          "ai": false
+        },
+        "provider": null,
+        "model": null,
+        "outbox_path": ".\\outbox\\1771400248347_84dbc4d22f8f4fffb9ec4b9687077066_cycle_0.json"
+      },
+      "stats": {
+        "n": 1,
+        "ok_n": 0,
+        "ok_rate": 0.0,
+        "elapsed_ms_avg": 14.0,
+        "elapsed_ms_min": 14,
+        "elapsed_ms_max": 14,
+        "last_ts_ms": 1771400248347
+      }
+    },
+    "policy": {
+      "schema": "mocka.policy.v1",
+      "decision": "cooldown",
+      "sleep_ms": 800,
+      "notes": [
+        "self_repair_prev_exception",
+        "low_ok_rate",
+        "ai_locked"
+      ]
+    }
+  },
+  "error": {
+    "message": "forced_test_exception"
+  }
+}

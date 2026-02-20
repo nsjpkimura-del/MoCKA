@@ -1,0 +1,25 @@
+﻿{
+    "event_type":  "file_edit",
+    "timestamp":  "20260219_175905",
+    "note":  "Phase11.9.5: gate integrate auditsearch (backupsearch + auditsearch unified)",
+    "target":  {
+                   "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\mocka_phase11.ps1",
+                   "size_bytes_before":  5597,
+                   "size_bytes_after":  5597,
+                   "file_name":  "mocka_phase11.ps1",
+                   "sha256_after":  "842607707b766effe2a7869c7d9e9498ad26d1e6eec9cb3d1caafd63b22839a7",
+                   "sha256_before":  "842607707b766effe2a7869c7d9e9498ad26d1e6eec9cb3d1caafd63b22839a7"
+               },
+    "backup":  {
+                   "dir":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_175905",
+                   "file":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_175905\\mocka_phase11.ps1",
+                   "sha256":  "842607707b766effe2a7869c7d9e9498ad26d1e6eec9cb3d1caafd63b22839a7"
+               },
+    "editor":  {
+                   "command":  "notepad"
+               },
+    "result":  {
+                   "started":  true,
+                   "completed":  true
+               }
+}

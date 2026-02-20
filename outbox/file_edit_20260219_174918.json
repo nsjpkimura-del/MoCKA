@@ -1,0 +1,25 @@
+﻿{
+    "event_type":  "file_edit",
+    "timestamp":  "20260219_174918",
+    "note":  "Phase11.9: add backupsearch command to gate (read-only)",
+    "target":  {
+                   "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\mocka_phase11.ps1",
+                   "size_bytes_before":  5086,
+                   "size_bytes_after":  5086,
+                   "file_name":  "mocka_phase11.ps1",
+                   "sha256_after":  "98a5e6ada1ec4c4cdd22c074038751a2299ce57a2e7e5650b6e1bbe24eab467e",
+                   "sha256_before":  "98a5e6ada1ec4c4cdd22c074038751a2299ce57a2e7e5650b6e1bbe24eab467e"
+               },
+    "backup":  {
+                   "dir":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_174918",
+                   "file":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_174918\\mocka_phase11.ps1",
+                   "sha256":  "98a5e6ada1ec4c4cdd22c074038751a2299ce57a2e7e5650b6e1bbe24eab467e"
+               },
+    "editor":  {
+                   "command":  "notepad"
+               },
+    "result":  {
+                   "started":  true,
+                   "completed":  true
+               }
+}

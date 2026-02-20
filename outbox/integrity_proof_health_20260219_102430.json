@@ -1,0 +1,10 @@
+﻿{
+    "ts":  "2026-02-19T10:24:30.2611669+09:00",
+    "kind":  "integrity_proof",
+    "artifacts":  [
+                      {
+                          "sha256":  "EDD9812D952BB8BFD6F3FDBACE0DDD1D35B7237131815C911FED1EFDD6CBF6B1",
+                          "path":  "C:\\Users\\sirok\\MoCKA\\outbox\\health_20260219_102430.json"
+                      }
+                  ]
+}

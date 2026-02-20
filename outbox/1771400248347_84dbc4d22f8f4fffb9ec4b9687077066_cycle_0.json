@@ -1,0 +1,56 @@
+{
+  "schema": "mocka.outbox.v1",
+  "run_id": "84dbc4d22f8f4fffb9ec4b9687077066",
+  "ts_ms": 1771400248347,
+  "stage": "cycle_0",
+  "ok": false,
+  "summary": "exception",
+  "data": {
+    "task_text": "self repair test",
+    "task_sha256": "04a9bd273fbdb638ab598b67a8570a2b90aaf6fe905c96406368a5ba85bf0990",
+    "cycle_index": 0,
+    "env": {
+      "MOCKA_ALLOW_TYPE": null,
+      "MOCKA_ALLOW_KEY": null,
+      "MOCKA_ALLOW_AI": null,
+      "MOCKA_PROVIDER": null,
+      "MOCKA_MODEL": null,
+      "MOCKA_CYCLES": "2",
+      "MOCKA_TASK": "self repair test"
+    },
+    "allowed": {
+      "type": false,
+      "key": false,
+      "ai": false
+    },
+    "timing": {
+      "start_ms": 1771400248347,
+      "end_ms": 1771400248361,
+      "elapsed_ms": 14
+    },
+    "memory_ref": {
+      "prev": null,
+      "stats": {
+        "n": 0,
+        "ok_n": 0,
+        "ok_rate": 0.0,
+        "elapsed_ms_avg": null,
+        "elapsed_ms_min": null,
+        "elapsed_ms_max": null,
+        "last_ts_ms": null
+      }
+    },
+    "policy": {
+      "schema": "mocka.policy.v1",
+      "decision": "normal",
+      "sleep_ms": 0,
+      "notes": [
+        "no_history",
+        "ai_locked"
+      ]
+    }
+  },
+  "error": {
+    "message": "forced_test_exception"
+  }
+}

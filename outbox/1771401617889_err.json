@@ -1,0 +1,38 @@
+{
+  "ts_ms": 1771401617889,
+  "step": 1,
+  "task": {
+    "prompt": "Hello from MoCKA."
+  },
+  "task_sha256": "b8fd7d3c72ddada7b15f671088633955feb3b4778289572c0207d04e29af41ec",
+  "env": {
+    "MOCKA_PROVIDER": "openai_http",
+    "OPENAI_MODEL": "gpt-4.1-mini",
+    "MOCKA_AI_TIMEOUT_MS": "30000"
+  },
+  "flags": {
+    "raise_test": false
+  },
+  "timing": {
+    "total_ms": 2
+  },
+  "ok": false,
+  "response": null,
+  "exception": {
+    "type": "ModuleNotFoundError",
+    "message": "No module named 'src'",
+    "stack": "Traceback (most recent call last):\n  File \"C:\\Users\\sirok\\MoCKA\\infield\\main_loop.py\", line 383, in run_loop\n    ai = call_ai(prompt)\n  File \"C:\\Users\\sirok\\MoCKA\\infield\\main_loop.py\", line 300, in call_ai\n    from src.mocka_ai import call_ai as _call_ai  # type: ignore\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'src'\n"
+  },
+  "policy": {
+    "decision": "halt",
+    "sleep_ms": 0,
+    "reason": "repeated failure",
+    "signals": {
+      "n": 10,
+      "ok_rate": 0.1,
+      "prev_exception": true,
+      "consecutive_fail": 6
+    }
+  },
+  "outbox_path": "C:\\Users\\sirok\\MoCKA\\outbox\\1771401617889_err.json"
+}

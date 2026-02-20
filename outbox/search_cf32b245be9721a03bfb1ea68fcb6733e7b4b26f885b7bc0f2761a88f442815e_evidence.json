@@ -1,0 +1,8 @@
+{
+  "search_id": "cf32b245be9721a03bfb1ea68fcb6733e7b4b26f885b7bc0f2761a88f442815e",
+  "timestamp": "2026-02-19T02:37:46.574254+00:00",
+  "query": "ps_runner OR runner",
+  "limit": 20,
+  "hits": 2,
+  "out_xlsx": "search_cf32b245be9721a03bfb1ea68fcb6733e7b4b26f885b7bc0f2761a88f442815e.xlsx"
+}

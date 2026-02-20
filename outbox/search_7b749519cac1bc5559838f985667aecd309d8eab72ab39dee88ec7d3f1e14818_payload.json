@@ -1,0 +1,19 @@
+{
+  "kind": "search",
+  "search_id": "7b749519cac1bc5559838f985667aecd309d8eab72ab39dee88ec7d3f1e14818",
+  "timestamp": "2026-02-19T03:01:46.385779+00:00",
+  "query": "tag1 OR memo",
+  "limit": 50,
+  "hits": 50,
+  "xlsx_file": "search_7b749519cac1bc5559838f985667aecd309d8eab72ab39dee88ec7d3f1e14818.xlsx",
+  "xlsx_schema": [
+    "id",
+    "timestamp",
+    "source",
+    "category",
+    "summary",
+    "raw_preview",
+    "tags",
+    "hash"
+  ]
+}

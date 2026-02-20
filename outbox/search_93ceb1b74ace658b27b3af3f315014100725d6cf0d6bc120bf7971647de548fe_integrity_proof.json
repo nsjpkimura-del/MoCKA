@@ -1,0 +1,9 @@
+{
+  "kind": "search",
+  "search_id": "93ceb1b74ace658b27b3af3f315014100725d6cf0d6bc120bf7971647de548fe",
+  "timestamp": "2026-02-19T02:39:21.514365+00:00",
+  "payload_file": "search_93ceb1b74ace658b27b3af3f315014100725d6cf0d6bc120bf7971647de548fe_payload.json",
+  "payload_sha256": "890a5ac1159b28a80b42dda0bc60e9d31519cd7b9930c0d01abe42de2e8cbc72",
+  "xlsx_file": "search_93ceb1b74ace658b27b3af3f315014100725d6cf0d6bc120bf7971647de548fe.xlsx",
+  "xlsx_sha256": "7df3a20dce3ba988c8e08988a210953a72895e86d73f45403a12039ced00bdfb"
+}

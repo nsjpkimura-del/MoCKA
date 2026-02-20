@@ -1,0 +1,9 @@
+{
+  "kind": "search",
+  "search_id": "8c25711e7b9796389621fb169e0d330ea2af5082d5f637aad9b7616fcc731bfd",
+  "timestamp": "2026-02-19T02:53:54.560665+00:00",
+  "query": "tag1 OR memo",
+  "limit": 200,
+  "hits": 6,
+  "xlsx_file": "search_8c25711e7b9796389621fb169e0d330ea2af5082d5f637aad9b7616fcc731bfd.xlsx"
+}

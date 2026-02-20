@@ -1,0 +1,9 @@
+﻿{
+    "id":  "9569f5cfa4804b6090da1ac8770471e6",
+    "ts_local":  "2026-02-20T10:31:40.5626806+09:00",
+    "sha256_after":  "06e74d419e01b3969ac09a39b47c000737ed538ee5b2607997e5f99f05d71d27",
+    "schema":  "mocka.phase11.file_edit.v1",
+    "sha256_source":  "c1875954954f0deff36d6ad1f9892d8c26776e604ff77512f64c317cd18313c6",
+    "target_path":  "C:\\Users\\sirok\\MoCKA\\test2.txt",
+    "backup_path":  "C:\\Users\\sirok\\MoCKA\\backup\\backup_20260220_103140.bak"
+}

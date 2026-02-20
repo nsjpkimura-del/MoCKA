@@ -1,0 +1,13 @@
+{
+  "event_type": "audit_search",
+  "generated_at": "20260219_181155",
+  "outbox": "C:\\Users\\sirok\\MoCKA\\outbox",
+  "query": {
+    "type": "edit",
+    "file_substring": "gateway_searchget.py",
+    "note_substring": "",
+    "top": 3
+  },
+  "result_count": 0,
+  "results": []
+}

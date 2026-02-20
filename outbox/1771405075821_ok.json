@@ -1,0 +1,130 @@
+{
+  "ts_ms": 1771405075821,
+  "step": 1,
+  "task": {
+    "prompt": "Hello from MoCKA."
+  },
+  "task_sha256": "b8fd7d3c72ddada7b15f671088633955feb3b4778289572c0207d04e29af41ec",
+  "env": {
+    "MOCKA_MAX_STEPS": "1"
+  },
+  "flags": {
+    "raise_test": false
+  },
+  "timing": {
+    "provider_call_ms": 1665,
+    "total_ms": 1665
+  },
+  "ok": true,
+  "response": {
+    "text": "Hello! How can I assist you today?",
+    "provider": "openai_http",
+    "usage": {
+      "input_tokens": 13,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 10,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 23
+    },
+    "raw": {
+      "meta": {
+        "provider": "openai_http",
+        "model": "gpt-4.1-mini",
+        "timing_ms": {
+          "provider_call_ms": 1664
+        },
+        "request": {
+          "model": "gpt-4.1-mini",
+          "timeout_ms": 30000
+        }
+      },
+      "response": {
+        "id": "resp_02f81431433218d40069957f14dd608194be21cae4fcdce62f",
+        "object": "response",
+        "created_at": 1771405076,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1771405077,
+        "error": null,
+        "frequency_penalty": 0.0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "output": [
+          {
+            "id": "msg_02f81431433218d40069957f15a5d88194b5df428754f4b96a",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "Hello! How can I assist you today?"
+              }
+            ],
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0.0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": null,
+        "reasoning": {
+          "effort": null,
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1.0,
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 1.0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 13,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens": 10,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 23
+        },
+        "user": null,
+        "metadata": {}
+      }
+    }
+  },
+  "exception": null,
+  "policy": {
+    "decision": "cooldown",
+    "sleep_ms": 5000,
+    "reason": "low_ok_rate",
+    "signals": {
+      "n": 5,
+      "ok_rate": 0.2,
+      "prev_exception": false,
+      "consecutive_fail": 0
+    }
+  }
+}

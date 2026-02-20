@@ -1,0 +1,39 @@
+{
+  "ts_ms": 1771402596146,
+  "step": 1,
+  "task": {
+    "prompt": "Hello from MoCKA."
+  },
+  "task_sha256": "b8fd7d3c72ddada7b15f671088633955feb3b4778289572c0207d04e29af41ec",
+  "env": {
+    "MOCKA_PROVIDER": "openai_http",
+    "OPENAI_MODEL": "gpt-4.1-mini",
+    "MOCKA_AI_TIMEOUT_MS": "30000",
+    "MOCKA_MAX_STEPS": "1",
+    "MOCKA_POLICY_HALT_AFTER_CONSEC_FAIL": "20"
+  },
+  "flags": {
+    "raise_test": false
+  },
+  "timing": {
+    "total_ms": 329
+  },
+  "ok": false,
+  "response": null,
+  "exception": {
+    "type": "ProviderError",
+    "message": "OpenAI HTTPError 401: {\n  \"error\": {\n    \"message\": \"Incorrect API key provided: sk-proj-**********************************************************************************p0Yk. You can find your API key at https://platform.openai.com/account/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"code\": \"invalid_api_key\",\n    \"param\": null\n  },\n  \"status\": 401\n}",
+    "stack": "Traceback (most recent call last):\n  File \"C:\\Users\\sirok\\MoCKA\\src\\mocka_ai.py\", line 100, in _call_openai_http\n    with urllib.request.urlopen(req, timeout=max(1, timeout_ms // 1000)) as resp:\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\request.py\", line 189, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\request.py\", line 495, in open\n    response = meth(req, response)\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\request.py\", line 604, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\request.py\", line 533, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\request.py\", line 466, in _call_chain\n    result = func(*args)\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\request.py\", line 613, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 401: Unauthorized\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\sirok\\MoCKA\\infield\\main_loop.py\", line 381, in run_loop\n    ai = call_ai(prompt)\n  File \"C:\\Users\\sirok\\MoCKA\\infield\\main_loop.py\", line 300, in call_ai\n    res = _call_ai(prompt, provider=provider, timeout_ms=timeout_ms)\n  File \"C:\\Users\\sirok\\MoCKA\\src\\mocka_ai.py\", line 66, in call_ai\n    return _call_openai_http(prompt, timeout_ms=timeout_ms)\n  File \"C:\\Users\\sirok\\MoCKA\\src\\mocka_ai.py\", line 125, in _call_openai_http\n    raise ProviderError(f\"OpenAI HTTPError {e.code}: {err_body}\") from e\nsrc.mocka_ai.ProviderError: OpenAI HTTPError 401: {\n  \"error\": {\n    \"message\": \"Incorrect API key provided: sk-proj-**********************************************************************************p0Yk. You can find your API key at https://platform.openai.com/account/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"code\": \"invalid_api_key\",\n    \"param\": null\n  },\n  \"status\": 401\n}\n"
+  },
+  "policy": {
+    "decision": "self_repair_prev_exception",
+    "sleep_ms": 0,
+    "reason": "prev exception",
+    "signals": {
+      "n": 2,
+      "ok_rate": 0.0,
+      "prev_exception": true,
+      "consecutive_fail": 2
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "mocka.outbox.v1",
+  "run_id": "4cc8636c59794343a52d4fb90f4b7910",
+  "ts_ms": 1771399397635,
+  "stage": "cycle_0",
+  "ok": true,
+  "summary": "ai_ok",
+  "data": {
+    "task_text": "phase9.2 policy verify NEW1",
+    "task_sha256": "b721c53baf32611a9dc3495a3469383cb012b74271415d178aa241f0bfa5fc1e",
+    "cycle_index": 0,
+    "env": {
+      "MOCKA_ALLOW_TYPE": "",
+      "MOCKA_ALLOW_KEY": "",
+      "MOCKA_ALLOW_AI": "",
+      "MOCKA_PROVIDER": "",
+      "MOCKA_MODEL": "",
+      "MOCKA_CYCLES": "1",
+      "MOCKA_TASK": "phase9.2 policy verify NEW1"
+    },
+    "allowed": {
+      "type": false,
+      "key": false,
+      "ai": false
+    },
+    "timing": {
+      "start_ms": 1771399397634,
+      "end_ms": 1771399397635,
+      "elapsed_ms": 0
+    },
+    "memory_ref": {
+      "prev": null,
+      "stats": {
+        "n": 0,
+        "ok_n": 0,
+        "ok_rate": 0.0,
+        "elapsed_ms_avg": null,
+        "elapsed_ms_min": null,
+        "elapsed_ms_max": null,
+        "last_ts_ms": null
+      }
+    },
+    "policy": {
+      "schema": "mocka.policy.v1",
+      "decision": "normal",
+      "sleep_ms": 0,
+      "notes": [
+        "no_history",
+        "ai_locked"
+      ]
+    },
+    "ai_provider": "stub",
+    "ai_model": "stub",
+    "ai_text": "[stub] phase9.2 policy verify NEW1"
+  },
+  "error": null
+}

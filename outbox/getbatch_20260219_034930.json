@@ -1,0 +1,18 @@
+{
+  "mode": "getbatch",
+  "generated_at_utc": "2026-02-19T03:49:30.099235+00:00",
+  "fixed_ids_order": [
+    "ID1",
+    "ID2"
+  ],
+  "missing_ids": [
+    "ID1",
+    "ID2"
+  ],
+  "proof": {
+    "ids_count": 2,
+    "ids_hash": "3c44220e07afce651ca18e8745a1144f52cf9f0aefced6e279d8bd377764557b",
+    "batch_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "batch": []
+}

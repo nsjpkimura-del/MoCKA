@@ -1,0 +1,23 @@
+﻿{
+    "event_type":  "file_edit",
+    "timestamp":  "20260219_173037",
+    "note":  "Phase11.8 bootstrap: create gate script with R-1..R-3",
+    "target":  {
+                   "sha256_before":  "0d1ab25a92d2fa8398c60f41880f50cf9cd284275a31e7b9f36238a14c249dad",
+                   "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\mocka_phase11.ps1",
+                   "file_name":  "mocka_phase11.ps1",
+                   "size_bytes_before":  1327
+               },
+    "backup":  {
+                   "dir":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_173037",
+                   "file":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_173037\\mocka_phase11.ps1",
+                   "sha256":  "0d1ab25a92d2fa8398c60f41880f50cf9cd284275a31e7b9f36238a14c249dad"
+               },
+    "editor":  {
+                   "command":  "notepad++"
+               },
+    "result":  {
+                   "completed":  false,
+                   "started":  true
+               }
+}

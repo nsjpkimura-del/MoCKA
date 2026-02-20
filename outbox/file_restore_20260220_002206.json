@@ -1,0 +1,24 @@
+{
+    "schema_version":  "file_restore_v1",
+    "event_type":  "file_restore",
+    "timestamp":  "20260220_002206",
+    "note":  "phase11.10 test restore gateway_audit_search",
+    "target_file":  "gateway_audit_search.py",
+    "target":  {
+                   "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\gateway_audit_search.py",
+                   "file_name":  "gateway_audit_search.py"
+               },
+    "restore_source":  {
+                           "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_182042\\gateway_audit_search.py",
+                           "file_name":  "gateway_audit_search.py"
+                       },
+    "backup":  {
+                   "dir":  "C:\\Users\\sirok\\MoCKA\\.\\infield\\phase11\\backup\\20260220_002206",
+                   "path":  "C:\\Users\\sirok\\MoCKA\\.\\infield\\phase11\\backup\\20260220_002206\\gateway_audit_search.py"
+               },
+    "hash":  {
+                 "sha256_before":  "a398e49eafd12abafb085d7002bb280e19166e5163cf41245cf4ed5d6279f0e0",
+                 "sha256_source":  "a398e49eafd12abafb085d7002bb280e19166e5163cf41245cf4ed5d6279f0e0",
+                 "sha256_after":  "a398e49eafd12abafb085d7002bb280e19166e5163cf41245cf4ed5d6279f0e0"
+             }
+}

@@ -1,0 +1,37 @@
+{
+  "ts_ms": 1771401502660,
+  "step": 1,
+  "task": {
+    "prompt": "Hello from MoCKA."
+  },
+  "task_sha256": "b8fd7d3c72ddada7b15f671088633955feb3b4778289572c0207d04e29af41ec",
+  "env": {
+    "MOCKA_POLICY_FORCE_DECISION": "halt",
+    "MOCKA_RAISE_TEST": "1"
+  },
+  "flags": {
+    "raise_test": true
+  },
+  "timing": {
+    "total_ms": 2
+  },
+  "ok": false,
+  "response": null,
+  "exception": {
+    "type": "RuntimeError",
+    "message": "MOCKA_RAISE_TEST=1",
+    "stack": "Traceback (most recent call last):\n  File \"C:\\Users\\sirok\\MoCKA\\infield\\main_loop.py\", line 380, in run_loop\n    raise RuntimeError(\"MOCKA_RAISE_TEST=1\")\nRuntimeError: MOCKA_RAISE_TEST=1\n"
+  },
+  "policy": {
+    "decision": "halt",
+    "sleep_ms": 0,
+    "reason": "forced",
+    "signals": {
+      "n": 10,
+      "ok_rate": 0.1,
+      "prev_exception": true,
+      "consecutive_fail": 5
+    }
+  },
+  "outbox_path": "C:\\Users\\sirok\\MoCKA\\outbox\\1771401502660_err.json"
+}

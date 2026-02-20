@@ -1,0 +1,10 @@
+{
+  "kind": "save",
+  "id": "1f193d65e90425b78a7504fe17972a2051dea8eaf089092c71ce2156b26744d5",
+  "timestamp": "2026-02-19T02:53:47.940370+00:00",
+  "payload_file": "1f193d65e90425b78a7504fe17972a2051dea8eaf089092c71ce2156b26744d5_payload.json",
+  "payload_sha256": "e93178c7c00963b08959c911e88be124f154d9f4327a68f2ce97745669d03f4e",
+  "xlsx_file": null,
+  "xlsx_sha256": null,
+  "dedupe_rule": "id = sha256(content_hash|source|category|tags)"
+}

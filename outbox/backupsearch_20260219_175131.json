@@ -1,0 +1,48 @@
+{
+  "event_type": "backup_search",
+  "generated_at": "20260219_175131",
+  "backup_root": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup",
+  "query": {
+    "file_substring": "mocka_phase11.ps1",
+    "top": 5,
+    "include_hash": false
+  },
+  "result_count": 5,
+  "results": [
+    {
+      "timestamp_dir": "20260219_174918",
+      "backup_dir": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_174918",
+      "file_name": "mocka_phase11.ps1",
+      "file_path": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_174918\\mocka_phase11.ps1",
+      "size_bytes": 5086
+    },
+    {
+      "timestamp_dir": "20260219_174514",
+      "backup_dir": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_174514",
+      "file_name": "mocka_phase11.ps1",
+      "file_path": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_174514\\mocka_phase11.ps1",
+      "size_bytes": 4409
+    },
+    {
+      "timestamp_dir": "20260219_174349",
+      "backup_dir": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_174349",
+      "file_name": "mocka_phase11.ps1",
+      "file_path": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_174349\\mocka_phase11.ps1",
+      "size_bytes": 4409
+    },
+    {
+      "timestamp_dir": "20260219_173414",
+      "backup_dir": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_173414",
+      "file_name": "mocka_phase11.ps1",
+      "file_path": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_173414\\mocka_phase11.ps1",
+      "size_bytes": 4409
+    },
+    {
+      "timestamp_dir": "20260219_173134",
+      "backup_dir": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_173134",
+      "file_name": "mocka_phase11.ps1",
+      "file_path": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_173134\\mocka_phase11.ps1",
+      "size_bytes": 1327
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+﻿{
+    "event_type":  "file_edit",
+    "timestamp":  "20260219_181804",
+    "note":  "Fix outbox absolute path",
+    "target":  {
+                   "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\gateway_audit_search.py",
+                   "size_bytes_before":  4550,
+                   "size_bytes_after":  4550,
+                   "file_name":  "gateway_audit_search.py",
+                   "sha256_after":  "a303d7ba7d4db6e14c473e9b8725b801a1a64dbbdb5fd31336f3a5bcde13c813",
+                   "sha256_before":  "a303d7ba7d4db6e14c473e9b8725b801a1a64dbbdb5fd31336f3a5bcde13c813"
+               },
+    "backup":  {
+                   "dir":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_181804",
+                   "file":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_181804\\gateway_audit_search.py",
+                   "sha256":  "a303d7ba7d4db6e14c473e9b8725b801a1a64dbbdb5fd31336f3a5bcde13c813"
+               },
+    "editor":  {
+                   "command":  "notepad"
+               },
+    "result":  {
+                   "started":  true,
+                   "completed":  true
+               }
+}

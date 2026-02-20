@@ -1,0 +1,25 @@
+﻿{
+    "event_type":  "file_edit",
+    "timestamp":  "20260219_174514",
+    "note":  "Phase11.8 final canonical rewrite: PS5.1 stable, root detection fixed, help normalized",
+    "target":  {
+                   "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\mocka_phase11.ps1",
+                   "size_bytes_before":  4409,
+                   "size_bytes_after":  4409,
+                   "file_name":  "mocka_phase11.ps1",
+                   "sha256_after":  "f463ddca15ad754d03203011751c1b1de550ab8e861b49b9be4c1ae32c894db1",
+                   "sha256_before":  "f463ddca15ad754d03203011751c1b1de550ab8e861b49b9be4c1ae32c894db1"
+               },
+    "backup":  {
+                   "dir":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_174514",
+                   "file":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_174514\\mocka_phase11.ps1",
+                   "sha256":  "f463ddca15ad754d03203011751c1b1de550ab8e861b49b9be4c1ae32c894db1"
+               },
+    "editor":  {
+                   "command":  "notepad"
+               },
+    "result":  {
+                   "started":  true,
+                   "completed":  true
+               }
+}

@@ -1,0 +1,28 @@
+﻿# Python virtual env
+.venv/
+.venv311/
+venv/
+__pycache__/
+*.pyc
+
+# Secrets and keys
+secrets/
+keys/
+*.pem
+*.key
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Logs
+*.log
+
+# Backup
+*.bak_*
+*.quarantine_*
+
+# Build
+dist/
+build/

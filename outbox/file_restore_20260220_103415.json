@@ -1,0 +1,10 @@
+﻿{
+    "source_edit_outbox":  "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260220_103140.json",
+    "target_path":  "C:\\Users\\sirok\\MoCKA\\test2.txt",
+    "sha256_after":  "c1875954954f0deff36d6ad1f9892d8c26776e604ff77512f64c317cd18313c6",
+    "id":  "c1c3cf89cf424b848d4fba4b8b7b336e",
+    "sha256_source_expected":  "c1875954954f0deff36d6ad1f9892d8c26776e604ff77512f64c317cd18313c6",
+    "schema":  "mocka.phase11.file_restore.v1",
+    "restore_verified":  true,
+    "ts_local":  "2026-02-20T10:34:15.0709822+09:00"
+}

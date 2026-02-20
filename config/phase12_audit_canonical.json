@@ -1,0 +1,11 @@
+{
+  "phase": "Phase12",
+  "authoritative_audit_db": "C:/Users/sirok/MoCKA/audit/ed25519/audit.db",
+  "legacy_audit_db": "C:/Users/sirok/MoCKA/infield/phase11/db/knowledge.db",
+  "policy": {
+    "audit_mode": "independent",
+    "legacy_mode": "read_only_archive",
+    "duplicate_prevention": "UNIQUE(event_id)+runtime_refuse"
+  },
+  "declared_at_utc": "2026-02-20T04:26:40Z"
+}

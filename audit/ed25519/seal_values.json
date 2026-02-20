@@ -1,0 +1,11 @@
+﻿{
+    "sealed_at_utc":  "2026-02-20T06:32:36Z",
+    "verify_pack_sha256":  "6CD710498943F83A91718918D1F7FF6FC727F3B7FC4BE6D96A9C1CD9E1C296AA",
+    "signature_checked":  2,
+    "final_chain_hash":  "e0630325c98603503ac6f2fee954f150afc55b42294f8b15a2130bae62f6f511",
+    "key_policy_event_id":  "36270e648c8af05a5415487b57418f234639325a2199c66916060690e6c1c172",
+    "phase":  "13-A",
+    "sealed_by":  "MoCKA_Phase13A",
+    "status":  "sealed",
+    "rows_verified":  3
+}

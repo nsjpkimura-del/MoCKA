@@ -1,0 +1,122 @@
+{
+  "mode": "getbatch",
+  "generated_at_utc": "2026-02-19T03:53:09.850237+00:00",
+  "fixed_ids_order": [
+    "1e4c4cfcfeb413f497824f1e02f5839931b9be18bbe5d48a8e6459f87a97f7bb",
+    "2cfd955f53d4f062787849f88e5b361f61cc8e2680c55675e0321523313b202c",
+    "f9ec59670076b0268f07a198a53077aebf20e872dd1f516c9bde7d9af2930ac7",
+    "e4cead0f569f4bdaf49defc6dc64502c17d6147537a9a0aa4b61f565a34e9204",
+    "7d456606116ec8ce9ed0b2b2fd4aedd6be097bde6bd3098c675ef723900a08a5",
+    "b973d940443636b197ff2c182506d6f3adccbe1e49efe6e7e5954c29c759eabf",
+    "49a49aad759fd1424a187a1ad44146c33b43114cb04016eede7b8993a2b0174b",
+    "589fa000545c72997deacafc2fef3b143fff0a00bd77738cd9b891790f1e92b7",
+    "2bfb45a6d2e9aa1d154016f3d90cc4a6ec2d01063b7ced15a595cbb1105f0109"
+  ],
+  "missing_ids": [],
+  "proof": {
+    "ids_count": 9,
+    "ids_hash": "28395b9d655bfcc79c006f190a993727e1d07b7d8602bc8fc5736b9ac982274c",
+    "batch_hash": "c837f08211a4d59dab23f785645fb1faee81cbaa0259b5b7c84b1171f8685d8e"
+  },
+  "batch": [
+    {
+      "id": "1e4c4cfcfeb413f497824f1e02f5839931b9be18bbe5d48a8e6459f87a97f7bb",
+      "timestamp": "2026-02-19T02:28:01.759086",
+      "source": "manual_test",
+      "category": "phase11",
+      "summary": "initial save test",
+      "raw_text": "This is the first Phase11 test record.",
+      "tags": "phase11,test",
+      "hash": "7960fa8496a3604133e49e5190ad6bebca9f8a1ff119e5c6ed7397dad4238613",
+      "integrity_recalc": "0a4dbe2a8de03e0c665b066fa5a7e614e39664fe98c7be97ddf9865ab9592e5e"
+    },
+    {
+      "id": "2cfd955f53d4f062787849f88e5b361f61cc8e2680c55675e0321523313b202c",
+      "timestamp": "2026-02-19T02:29:01.763252",
+      "source": "manual_test",
+      "category": "phase11",
+      "summary": "initial save test",
+      "raw_text": "This is the first Phase11 test record.",
+      "tags": "phase11,test",
+      "hash": "7960fa8496a3604133e49e5190ad6bebca9f8a1ff119e5c6ed7397dad4238613",
+      "integrity_recalc": "1e7555d8e766711daca6178607ae820c66afdd792880f99567d0f17be9359965"
+    },
+    {
+      "id": "f9ec59670076b0268f07a198a53077aebf20e872dd1f516c9bde7d9af2930ac7",
+      "timestamp": "2026-02-19T02:29:40.827521+00:00",
+      "source": "manual_test",
+      "category": "phase11",
+      "summary": "initial save test",
+      "raw_text": "This is the first Phase11 test record.",
+      "tags": "phase11,test",
+      "hash": "7960fa8496a3604133e49e5190ad6bebca9f8a1ff119e5c6ed7397dad4238613",
+      "integrity_recalc": "764bd5e6a4c71b18563fe09d45ee65e6b1a02eace57d5919743e4f975230444d"
+    },
+    {
+      "id": "e4cead0f569f4bdaf49defc6dc64502c17d6147537a9a0aa4b61f565a34e9204",
+      "timestamp": "2026-02-19T02:35:25.347495+00:00",
+      "source": "manual_test",
+      "category": "phase11",
+      "summary": "initial save test",
+      "raw_text": "This is the first Phase11 test record.",
+      "tags": "phase11,test",
+      "hash": "7960fa8496a3604133e49e5190ad6bebca9f8a1ff119e5c6ed7397dad4238613",
+      "integrity_recalc": "97ab857b23d35a591e248696fbf4f7fe5982f67165bfb7848269ee3483cd3805"
+    },
+    {
+      "id": "7d456606116ec8ce9ed0b2b2fd4aedd6be097bde6bd3098c675ef723900a08a5",
+      "timestamp": "2026-02-19T02:36:46.458225+00:00",
+      "source": "runner_test",
+      "category": "phase11",
+      "summary": "argparse ok",
+      "raw_text": "save via runner args",
+      "tags": "phase11,runner",
+      "hash": "3d9ad2e36168202f2b04a44abfbfed9b945149d2e1eb611046d9ec9bd8203f62",
+      "integrity_recalc": "24e8bee2d67f05045b0dee98c35319655e0210651adb30d7dbee8bd1e9f6f6e4"
+    },
+    {
+      "id": "b973d940443636b197ff2c182506d6f3adccbe1e49efe6e7e5954c29c759eabf",
+      "timestamp": "2026-02-19T02:37:39.095851+00:00",
+      "source": "ps_runner",
+      "category": "phase11",
+      "summary": "runner save",
+      "raw_text": "saved by mocka_phase11.ps1",
+      "tags": "phase11,runner",
+      "hash": "15ce6193b389fb8e34cf4242921d3bf57a05f5f5c3208a1302eed33bc5447000",
+      "integrity_recalc": "55c2fcfee41762b8f9d2337805e14e06794d6a0bba713742a4aac8e043a33d87"
+    },
+    {
+      "id": "49a49aad759fd1424a187a1ad44146c33b43114cb04016eede7b8993a2b0174b",
+      "timestamp": "2026-02-19T02:39:15.913999+00:00",
+      "source": "proof_unify",
+      "category": "phase11",
+      "summary": "evidence unified",
+      "raw_text": "save evidence json/proof json",
+      "tags": "phase11,evidence",
+      "hash": "85b556de7c1a5c75cbca80ce6d4090611de9000eac8aa3fd24e820c213ec997d",
+      "integrity_recalc": "a6d0c0bbef5b39c85773ef6a1307d29269b65d29bd8aba05ee605564b9b17465"
+    },
+    {
+      "id": "589fa000545c72997deacafc2fef3b143fff0a00bd77738cd9b891790f1e92b7",
+      "timestamp": "2026-02-19T02:46:57.211223+00:00",
+      "source": "perf",
+      "category": "phase11",
+      "summary": "fast save",
+      "raw_text": "fast save 2026-02-19T11:46:56.5896366+09:00",
+      "tags": "phase11,perf",
+      "hash": "7693d64cfcaa68463f3d427349b26568eff137d1f61ea37fe20babba8159402b",
+      "integrity_recalc": "10f68d7d0e2362ffa8f4b08f35deedcfeb9de3b9bf15294e4bdae5769fc4d3e3"
+    },
+    {
+      "id": "2bfb45a6d2e9aa1d154016f3d90cc4a6ec2d01063b7ced15a595cbb1105f0109",
+      "timestamp": "2026-02-19T03:13:58.355999+00:00",
+      "source": "manual",
+      "category": "phase11",
+      "summary": "no_summary",
+      "raw_text": "new knowledge",
+      "tags": "phase11",
+      "hash": "450d99100fdf1752798f87e22114b485b7ea4a7ce9a02cd2bf2f44e1c3c2b369",
+      "integrity_recalc": "313b778d69798b63c2a2070682ce7e0d53bcd1441b7fca543bcf61b71e2e29e0"
+    }
+  ]
+}

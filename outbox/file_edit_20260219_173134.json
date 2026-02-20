@@ -1,0 +1,25 @@
+﻿{
+    "event_type":  "file_edit",
+    "timestamp":  "20260219_173134",
+    "note":  "Phase11.8 gate integration: add edit/restore/searchget dispatch",
+    "target":  {
+                   "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\mocka_phase11.ps1",
+                   "size_bytes_before":  1327,
+                   "size_bytes_after":  1327,
+                   "file_name":  "mocka_phase11.ps1",
+                   "sha256_after":  "0d1ab25a92d2fa8398c60f41880f50cf9cd284275a31e7b9f36238a14c249dad",
+                   "sha256_before":  "0d1ab25a92d2fa8398c60f41880f50cf9cd284275a31e7b9f36238a14c249dad"
+               },
+    "backup":  {
+                   "dir":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_173134",
+                   "file":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_173134\\mocka_phase11.ps1",
+                   "sha256":  "0d1ab25a92d2fa8398c60f41880f50cf9cd284275a31e7b9f36238a14c249dad"
+               },
+    "editor":  {
+                   "command":  "notepad"
+               },
+    "result":  {
+                   "started":  true,
+                   "completed":  true
+               }
+}

@@ -1,0 +1,8 @@
+﻿{
+    "id":  "3a7614785e00405e91f8de1fbb3204a5",
+    "ts_local":  "2026-02-20T10:21:09.1102596+09:00",
+    "sha256_after":  "cd30051b174d995ca02c28c2e623b74d4f43b00a2b84d7761a4b63d6e3e8cc36",
+    "schema":  "mocka.phase11.file_edit.v1",
+    "sha256_source":  "65212309393ff4be3469f0cd4c9095cbd89ad448c51c8eac6a0544d62c848c7d",
+    "target_path":  "C:\\Users\\sirok\\MoCKA\\test.txt"
+}

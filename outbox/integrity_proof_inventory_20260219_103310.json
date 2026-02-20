@@ -1,0 +1,14 @@
+﻿{
+    "ts":  "2026-02-19T10:34:27.9014833+09:00",
+    "kind":  "integrity_proof",
+    "artifacts":  [
+                      {
+                          "sha256":  "4A7F068A39DD7AD9BD79902D7E47DDC15F60A553B27E568DBA890D3E0B53F6AE",
+                          "path":  "C:\\Users\\sirok\\MoCKA\\outbox\\inventory_20260219_103310.md"
+                      },
+                      {
+                          "sha256":  "AA916A7A489D13F343D95E5EB6AF765C72B3A2F9CEEA35734E80A966597D0CF8",
+                          "path":  "C:\\Users\\sirok\\MoCKA\\outbox\\inventory_20260219_103310.json"
+                      }
+                  ]
+}

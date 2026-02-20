@@ -1,0 +1,25 @@
+﻿{
+    "event_type":  "file_edit",
+    "timestamp":  "20260219_182042",
+    "note":  "Phase11.9.7 fix extension glob",
+    "target":  {
+                   "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\gateway_audit_search.py",
+                   "size_bytes_before":  2648,
+                   "size_bytes_after":  2648,
+                   "file_name":  "gateway_audit_search.py",
+                   "sha256_after":  "a398e49eafd12abafb085d7002bb280e19166e5163cf41245cf4ed5d6279f0e0",
+                   "sha256_before":  "a398e49eafd12abafb085d7002bb280e19166e5163cf41245cf4ed5d6279f0e0"
+               },
+    "backup":  {
+                   "dir":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_182042",
+                   "file":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_182042\\gateway_audit_search.py",
+                   "sha256":  "a398e49eafd12abafb085d7002bb280e19166e5163cf41245cf4ed5d6279f0e0"
+               },
+    "editor":  {
+                   "command":  "notepad"
+               },
+    "result":  {
+                   "started":  true,
+                   "completed":  true
+               }
+}

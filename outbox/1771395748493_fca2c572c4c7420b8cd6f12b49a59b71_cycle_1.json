@@ -1,0 +1,16 @@
+{
+  "schema": "mocka.outbox.v1",
+  "run_id": "fca2c572c4c7420b8cd6f12b49a59b71",
+  "ts_ms": 1771395748493,
+  "stage": "cycle_1",
+  "ok": true,
+  "summary": "ai_ok",
+  "data": {
+    "task_text": "outbox integration test",
+    "cycle_index": 1,
+    "ai_provider": "stub",
+    "ai_model": "stub",
+    "ai_text": "[stub] outbox integration test"
+  },
+  "error": null
+}

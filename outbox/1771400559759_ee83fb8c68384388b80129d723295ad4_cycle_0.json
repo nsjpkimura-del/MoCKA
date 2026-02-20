@@ -1,0 +1,56 @@
+{
+  "schema": "mocka.outbox.v1",
+  "run_id": "ee83fb8c68384388b80129d723295ad4",
+  "ts_ms": 1771400559759,
+  "stage": "cycle_0",
+  "ok": false,
+  "summary": "exception",
+  "data": {
+    "task_text": "halt reflect test",
+    "task_sha256": "fb11e6c3906e3ff25a779d87b6773491b7f4c4773178c25f3c8bf0132497cfa6",
+    "cycle_index": 0,
+    "env": {
+      "MOCKA_ALLOW_TYPE": null,
+      "MOCKA_ALLOW_KEY": null,
+      "MOCKA_ALLOW_AI": null,
+      "MOCKA_PROVIDER": null,
+      "MOCKA_MODEL": null,
+      "MOCKA_CYCLES": "5",
+      "MOCKA_TASK": "halt reflect test"
+    },
+    "allowed": {
+      "type": false,
+      "key": false,
+      "ai": false
+    },
+    "timing": {
+      "start_ms": 1771400559759,
+      "end_ms": 1771400559771,
+      "elapsed_ms": 12
+    },
+    "memory_ref": {
+      "prev": null,
+      "stats": {
+        "n": 0,
+        "ok_n": 0,
+        "ok_rate": 0.0,
+        "elapsed_ms_avg": null,
+        "elapsed_ms_min": null,
+        "elapsed_ms_max": null,
+        "last_ts_ms": null
+      }
+    },
+    "policy": {
+      "schema": "mocka.policy.v1",
+      "decision": "halt",
+      "sleep_ms": 0,
+      "notes": [
+        "force_decision",
+        "ai_locked"
+      ]
+    }
+  },
+  "error": {
+    "message": "forced_test_exception"
+  }
+}

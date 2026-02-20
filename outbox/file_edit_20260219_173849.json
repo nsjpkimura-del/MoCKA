@@ -1,0 +1,25 @@
+﻿{
+    "event_type":  "file_edit",
+    "timestamp":  "20260219_173849",
+    "note":  "Phase11.8 gate test: no-op open/save",
+    "target":  {
+                   "path":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\gateway_searchget.py",
+                   "size_bytes_before":  4845,
+                   "size_bytes_after":  4845,
+                   "file_name":  "gateway_searchget.py",
+                   "sha256_after":  "4bb87f069d524bb734c713149db3feba680cdb8898de1b3988221da91ab0d52c",
+                   "sha256_before":  "4bb87f069d524bb734c713149db3feba680cdb8898de1b3988221da91ab0d52c"
+               },
+    "backup":  {
+                   "dir":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_173849",
+                   "file":  "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\backup\\20260219_173849\\gateway_searchget.py",
+                   "sha256":  "4bb87f069d524bb734c713149db3feba680cdb8898de1b3988221da91ab0d52c"
+               },
+    "editor":  {
+                   "command":  "notepad"
+               },
+    "result":  {
+                   "started":  true,
+                   "completed":  true
+               }
+}

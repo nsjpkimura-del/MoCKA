@@ -1,0 +1,19 @@
+{
+  "kind": "search",
+  "search_id": "94e6083dd97c6c7ee31458d37a755808141f4798753e376624fd23403d60cf46",
+  "timestamp": "2026-02-19T02:59:07.947558+00:00",
+  "query": "tag1 OR memo",
+  "limit": 200,
+  "hits": 128,
+  "xlsx_file": "search_94e6083dd97c6c7ee31458d37a755808141f4798753e376624fd23403d60cf46.xlsx",
+  "xlsx_schema": [
+    "id",
+    "timestamp",
+    "source",
+    "category",
+    "summary",
+    "raw_preview",
+    "tags",
+    "hash"
+  ]
+}

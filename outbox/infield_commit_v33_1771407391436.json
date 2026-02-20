@@ -1,0 +1,22 @@
+﻿{
+  "ts_ms": 1771407391436,
+  "kind": "governance_decision",
+  "title": "MoCKA External Connectivity Constitution v3.3 adopted",
+  "phase": "Phase 10",
+  "decision": {
+    "adopted": true,
+    "version": "v3.3",
+    "core": ["infield_primary", "outfield_lightweight", "degraded_mode"],
+    "devices": ["transactional_outbox", "circuit_breaker", "idempotency", "token_bucket", "semantic_beacon"],
+    "notes": "Stop is forbidden; always degrade. Outfield stores pointers and summaries only."
+  },
+  "beacon": {
+    "priority_score": 10,
+    "risk_flags": ["billing", "data_loss", "external_dependency"],
+    "beacon_summary": "Adopted v3.3. Infield is sole source of truth. Outfield is distribution only. Degrade instead of stop."
+  },
+  "proof": {
+    "writer": "powershell_manual_infield",
+    "expected_persistence": "survives reboot and outfield failure"
+  }
+}

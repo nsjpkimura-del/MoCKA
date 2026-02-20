@@ -1,0 +1,280 @@
+{
+  "event_type": "auditsearch_result",
+  "generated_at_utc": "20260219_094329",
+  "outbox": "C:\\Users\\sirok\\MoCKA\\outbox",
+  "query": {
+    "type": "edit",
+    "file_substring": "gateway_audit_search.py",
+    "note_substring": "",
+    "top": 10
+  },
+  "scanned_file_count": 16,
+  "scanned_event_count": 16,
+  "parse_error_count": 0,
+  "result_count": 3,
+  "results": [
+    {
+      "timestamp": "20260219_094323",
+      "event_type": "file_edit",
+      "note": "add schema_version contract",
+      "target_file": "gateway_audit_search.py",
+      "target_path": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\gateway_audit_search.py",
+      "log_file": "file_edit_20260219_094323.json"
+    },
+    {
+      "timestamp": "20260219_182042",
+      "event_type": "file_edit",
+      "note": "Phase11.9.7 fix extension glob",
+      "target_file": "gateway_audit_search.py",
+      "target_path": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\gateway_audit_search.py",
+      "log_file": "file_edit_20260219_182042.json"
+    },
+    {
+      "timestamp": "20260219_181804",
+      "event_type": "file_edit",
+      "note": "Fix outbox absolute path",
+      "target_file": "gateway_audit_search.py",
+      "target_path": "C:\\Users\\sirok\\MoCKA\\infield\\phase11\\gateway_audit_search.py",
+      "log_file": "file_edit_20260219_181804.json"
+    }
+  ],
+  "debug": {
+    "scanned_files": [
+      "file_edit_20260219_094323.json",
+      "file_edit_20260219_182042.json",
+      "file_edit_20260219_181804.json",
+      "file_edit_20260219_181144.json",
+      "file_edit_20260219_180022.json",
+      "file_edit_20260219_175905.json",
+      "file_edit_20260219_174918.json",
+      "file_edit_20260219_174514.json",
+      "file_edit_20260219_174349.json",
+      "file_edit_20260219_173849.json",
+      "file_edit_20260219_173845.json",
+      "file_edit_20260219_173743.json",
+      "file_edit_20260219_173414.json",
+      "file_edit_20260219_173134.json",
+      "file_edit_20260219_173105.json",
+      "file_edit_20260219_173037.json"
+    ],
+    "file_stats": [
+      {
+        "log_file": "file_edit_20260219_094323.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_094323.json",
+        "size_bytes": 900,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 1
+      },
+      {
+        "log_file": "file_edit_20260219_182042.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_182042.json",
+        "size_bytes": 1179,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 1
+      },
+      {
+        "log_file": "file_edit_20260219_181804.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_181804.json",
+        "size_bytes": 1173,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 1
+      },
+      {
+        "log_file": "file_edit_20260219_181144.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_181144.json",
+        "size_bytes": 1158,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_180022.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_180022.json",
+        "size_bytes": 1164,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_175905.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_175905.json",
+        "size_bytes": 1207,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_174918.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_174918.json",
+        "size_bytes": 1186,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_174514.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_174514.json",
+        "size_bytes": 1217,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_174349.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_174349.json",
+        "size_bytes": 1201,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_173849.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173849.json",
+        "size_bytes": 1176,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_173845.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173845.json",
+        "size_bytes": 1176,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_173743.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173743.json",
+        "size_bytes": 1176,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_173414.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173414.json",
+        "size_bytes": 1218,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_173134.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173134.json",
+        "size_bytes": 1194,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_173105.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173105.json",
+        "size_bytes": 1150,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_173037.json",
+        "path": "C:\\Users\\sirok\\MoCKA\\outbox\\file_edit_20260219_173037.json",
+        "size_bytes": 1035,
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      }
+    ],
+    "parse_errors": [],
+    "filter_observation_sample": [
+      {
+        "log_file": "file_edit_20260219_094323.json",
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 1
+      },
+      {
+        "log_file": "file_edit_20260219_182042.json",
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 1
+      },
+      {
+        "log_file": "file_edit_20260219_181804.json",
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 1
+      },
+      {
+        "log_file": "file_edit_20260219_181144.json",
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_180022.json",
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_175905.json",
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_174918.json",
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_174514.json",
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_174349.json",
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      },
+      {
+        "log_file": "file_edit_20260219_173849.json",
+        "parse_ok": true,
+        "parse_mode": "json",
+        "events_in_file": 1,
+        "matched_in_file": 0
+      }
+    ]
+  }
+}

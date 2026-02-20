@@ -1,0 +1,21 @@
+{
+  "event_type": "audit_search",
+  "generated_at": "20260220_093802",
+  "source": "db",
+  "query": {
+    "type": "restore",
+    "file_substring": "",
+    "note_substring": "",
+    "top": 20
+  },
+  "result_count": 1,
+  "results": [
+    {
+      "timestamp": "20260220_002206",
+      "event_type": "file_restore",
+      "note": "phase11.10 test restore gateway_audit_search",
+      "target_file": "gateway_audit_search.py",
+      "log_file": null
+    }
+  ]
+}

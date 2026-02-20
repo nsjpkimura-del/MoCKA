@@ -1,0 +1,36 @@
+{
+  "schema": "mocka.outbox.v1",
+  "run_id": "7784ea286a6f4d1ea7a7f17e62e86521",
+  "ts_ms": 1771398241968,
+  "stage": "cycle_0",
+  "ok": true,
+  "summary": "ai_ok",
+  "data": {
+    "task_text": "phase9 memory smoke",
+    "task_sha256": "d6ab15958afc9a6b6b6dad8f53558abcd2840d4b6f6c4cb634b72b81e6a43c99",
+    "cycle_index": 0,
+    "env": {
+      "MOCKA_ALLOW_TYPE": "",
+      "MOCKA_ALLOW_KEY": "",
+      "MOCKA_ALLOW_AI": "",
+      "MOCKA_PROVIDER": "",
+      "MOCKA_MODEL": "",
+      "MOCKA_CYCLES": "2",
+      "MOCKA_TASK": "phase9 memory smoke"
+    },
+    "allowed": {
+      "type": false,
+      "key": false,
+      "ai": false
+    },
+    "timing": {
+      "start_ms": 1771398241968,
+      "end_ms": 1771398241968,
+      "elapsed_ms": 0
+    },
+    "ai_provider": "stub",
+    "ai_model": "stub",
+    "ai_text": "[stub] phase9 memory smoke"
+  },
+  "error": null
+}

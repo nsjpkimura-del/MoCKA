@@ -1,0 +1,71 @@
+{
+  "schema": "mocka.outbox.v1",
+  "run_id": "3a32e2c365d84edb92b00bc5a0c29ead",
+  "ts_ms": 1771399723463,
+  "stage": "cycle_0",
+  "ok": true,
+  "summary": "ai_ok",
+  "data": {
+    "task_text": "phase9.2 policy verify",
+    "task_sha256": "0035a64bf468e933dcc24a86287dcc93b4c7756f9f36a243494962d18c31dd48",
+    "cycle_index": 0,
+    "env": {
+      "MOCKA_ALLOW_TYPE": "",
+      "MOCKA_ALLOW_KEY": "",
+      "MOCKA_ALLOW_AI": "",
+      "MOCKA_PROVIDER": "",
+      "MOCKA_MODEL": "",
+      "MOCKA_CYCLES": "2",
+      "MOCKA_TASK": "phase9.2 policy verify"
+    },
+    "allowed": {
+      "type": false,
+      "key": false,
+      "ai": false
+    },
+    "timing": {
+      "start_ms": 1771399723453,
+      "end_ms": 1771399723463,
+      "elapsed_ms": 9
+    },
+    "memory_ref": {
+      "prev": {
+        "run_id": "47b5f602ef4a4304871cf7ee80ef2b39",
+        "stage": "cycle_1",
+        "ok": true,
+        "summary": "ai_ok",
+        "ts_ms": 1771399717965,
+        "elapsed_ms": 8,
+        "allowed": {
+          "type": false,
+          "key": false,
+          "ai": false
+        },
+        "provider": "stub",
+        "model": "stub",
+        "outbox_path": ".\\outbox\\1771399717965_47b5f602ef4a4304871cf7ee80ef2b39_cycle_1.json"
+      },
+      "stats": {
+        "n": 3,
+        "ok_n": 3,
+        "ok_rate": 1.0,
+        "elapsed_ms_avg": 8.333333333333334,
+        "elapsed_ms_min": 8,
+        "elapsed_ms_max": 9,
+        "last_ts_ms": 1771399717965
+      }
+    },
+    "policy": {
+      "schema": "mocka.policy.v1",
+      "decision": "normal",
+      "sleep_ms": 0,
+      "notes": [
+        "ai_locked"
+      ]
+    },
+    "ai_provider": "stub",
+    "ai_model": "stub",
+    "ai_text": "[stub] phase9.2 policy verify"
+  },
+  "error": null
+}

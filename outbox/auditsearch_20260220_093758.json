@@ -1,0 +1,35 @@
+{
+  "event_type": "audit_search",
+  "generated_at": "20260220_093758",
+  "source": "db",
+  "query": {
+    "type": "edit",
+    "file_substring": "",
+    "note_substring": "",
+    "top": 20
+  },
+  "result_count": 3,
+  "results": [
+    {
+      "timestamp": "20260220_003426",
+      "event_type": "file_edit",
+      "note": "phase11.12 bomless test",
+      "target_file": "gateway_audit_search.py",
+      "log_file": null
+    },
+    {
+      "timestamp": "20260220_003208",
+      "event_type": "file_edit",
+      "note": "phase11.12 bomless test",
+      "target_file": "gateway_audit_search.py",
+      "log_file": null
+    },
+    {
+      "timestamp": "20260219_094323",
+      "event_type": "file_edit",
+      "note": "add schema_version contract",
+      "target_file": "gateway_audit_search.py",
+      "log_file": null
+    }
+  ]
+}

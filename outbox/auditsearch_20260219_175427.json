@@ -1,0 +1,13 @@
+{
+  "event_type": "audit_search",
+  "generated_at": "20260219_175427",
+  "outbox": "C:\\Users\\sirok\\MoCKA\\outbox",
+  "query": {
+    "type": "all",
+    "file_substring": "",
+    "note_substring": "",
+    "top": 20
+  },
+  "result_count": 0,
+  "results": []
+}

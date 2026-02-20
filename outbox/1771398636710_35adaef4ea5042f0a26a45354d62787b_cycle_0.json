@@ -1,0 +1,48 @@
+{
+  "schema": "mocka.outbox.v1",
+  "run_id": "35adaef4ea5042f0a26a45354d62787b",
+  "ts_ms": 1771398636710,
+  "stage": "cycle_0",
+  "ok": true,
+  "summary": "ai_ok",
+  "data": {
+    "task_text": "phase9.1 ref smoke",
+    "task_sha256": "1578d6284020d4dfaaacac3abc75c2e6c1ed2b25c8ceef92253bbf4c2675d2a3",
+    "cycle_index": 0,
+    "env": {
+      "MOCKA_ALLOW_TYPE": "",
+      "MOCKA_ALLOW_KEY": "",
+      "MOCKA_ALLOW_AI": "",
+      "MOCKA_PROVIDER": "",
+      "MOCKA_MODEL": "",
+      "MOCKA_CYCLES": "1",
+      "MOCKA_TASK": "phase9.1 ref smoke"
+    },
+    "allowed": {
+      "type": false,
+      "key": false,
+      "ai": false
+    },
+    "timing": {
+      "start_ms": 1771398636710,
+      "end_ms": 1771398636710,
+      "elapsed_ms": 0
+    },
+    "memory_ref": {
+      "prev": null,
+      "stats": {
+        "n": 0,
+        "ok_n": 0,
+        "ok_rate": 0.0,
+        "elapsed_ms_avg": null,
+        "elapsed_ms_min": null,
+        "elapsed_ms_max": null,
+        "last_ts_ms": null
+      }
+    },
+    "ai_provider": "stub",
+    "ai_model": "stub",
+    "ai_text": "[stub] phase9.1 ref smoke"
+  },
+  "error": null
+}
