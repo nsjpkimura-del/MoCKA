@@ -1,4 +1,1 @@
-Contracts and schemas for MoCKA Public/Private boundary.
-
-Public defines, Private implements.
-
+﻿# Contracts define the Public/Private boundary.
