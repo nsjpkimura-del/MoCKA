@@ -1,0 +1,7 @@
+﻿{
+    "created_at":  "2026-02-20T15:00:00Z",
+    "rotation_cycle":  "90days",
+    "key_id":  "ed25519_20260220_01",
+    "algorithm":  "Ed25519",
+    "policy_version":  "1.0"
+}

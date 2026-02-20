@@ -39,3 +39,12 @@ logs/
 
 # windows noise
 desktop.ini
+
+# local keys cache (do not track)
+./keys/
+
+
+# allow public verification key set under audit
+!audit/ed25519/keys/ed25519_public.key
+!audit/ed25519/keys/key_metadata.json
+!audit/ed25519/keys/key_policy_v1.0.md
