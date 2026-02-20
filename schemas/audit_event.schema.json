@@ -1,0 +1,17 @@
+﻿{
+  "run_id": "string",
+  "ts_utc": "string",
+  "actor": "string",
+  "decision": "string",
+  "policy": {
+    "version": "string",
+    "result": "string"
+  },
+  "artifacts": [
+    {
+      "kind": "string",
+      "path": "string",
+      "sha256": "string"
+    }
+  ]
+}
