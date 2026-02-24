@@ -1,0 +1,4 @@
+﻿field_player.py.count=4
+field_player.pkg.count=0
+field_player.py.paths=C:\Users\sirok\MoCKA\field_player.py | C:\Users\sirok\mocka-core-private\infield\field_player.py | C:\Users\sirok\mocka-pythonbridge\field_player.py | C:\Users\sirok\MoCKA_clean_test\infield\field_player.py
+field_player.pkg.paths=

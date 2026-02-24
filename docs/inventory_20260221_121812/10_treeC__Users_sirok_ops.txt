@@ -1,0 +1,8 @@
+フォルダー パスの一覧:  ボリューム Windows
+ボリューム シリアル番号は 100B-4677 です
+C:\USERS\SIROK\OPS
+    check_infield.ps1
+    entrypoint_guard.py
+    
+サブフォルダーは存在しません 
+

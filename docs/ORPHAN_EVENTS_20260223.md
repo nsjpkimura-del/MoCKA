@@ -1,0 +1,15 @@
+﻿# ORPHAN_EVENTS_20260223
+
+These events are not reachable from current TIP:
+
+43a48e0cec2b8cba2f3b955f048223e1d5756784d64cdb5df40229592c96df2b
+47e418f19c0463830fcc2799516eddb74a71c39be322fdf595373cd74620d38a
+53499d0346510a9d560a83e460d12d7d76d5162056a932c53d51101372fdcf41
+e18714e31c5716118d5535345537037d2b2eca052ba706b2aa557ab19a6a257e
+fd58dcfa2f987814ec70658b559b9e4fbabd2842a01d44f4cb0acd22df17e646
+
+Status:
+- main chain is valid
+- reachable length=19
+- no deletion performed
+- cleanup deferred to Phase14

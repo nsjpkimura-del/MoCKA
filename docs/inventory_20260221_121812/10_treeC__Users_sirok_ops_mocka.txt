@@ -1,0 +1,9 @@
+フォルダー パスの一覧:  ボリューム Windows
+ボリューム シリアル番号は 100B-4677 です
+C:\USERS\SIROK\OPS_MOCKA
+    inventory_mocka.ps1
+    mocka_inventory_20260217_171317.md
+    verify_credentials.ps1
+    
+サブフォルダーは存在しません 
+

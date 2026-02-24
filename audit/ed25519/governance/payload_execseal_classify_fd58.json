@@ -1,0 +1,7 @@
+{
+  "proof_action": "phase14_update_classification",
+  "target_event_id": "fd58dcfa2f987814ec70658b559b9e4fbabd2842a01d44f4cb0acd22df17e646",
+  "result_classification": "reintegrated",
+  "proof_tip_selected": "33cedbb94b557e08c1babf10006f288c112e26b2ecd4cb563458ff632f3b07d9",
+  "reason": "Phase14.6 symmetry: decision -> proof execution recorded"
+}

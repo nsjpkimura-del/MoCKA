@@ -1,0 +1,10 @@
+{
+  "proof_action": "phase14_quarantine_orphan",
+  "target_event_id": "43a48e0cec2b8cba2f3b955f048223e1d5756784d64cdb5df40229592c96df2b",
+  "result_classification": "quarantined",
+  "snapshot_path": "C:\\Users\\sirok\\MoCKA\\audit\\ed25519\\quarantine\\43a48e0cec2b8cba2f3b955f048223e1d5756784d64cdb5df40229592c96df2b.json",
+  "snapshot_sha256": "0461c57d907867479378bc58bbb5aa8f1f0b899de6e11170118c8cd6ae8b0fb5",
+  "backup_id": "bk_quarantine_43a48e0c_reenact_1",
+  "proof_tip_selected": "33cedbb94b557e08c1babf10006f288c112e26b2ecd4cb563458ff632f3b07d9",
+  "reason": "Phase14.6 reenactment: decision -> proof execution -> snapshot sealed"
+}
