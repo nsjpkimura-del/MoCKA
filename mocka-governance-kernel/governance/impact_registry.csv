@@ -1,0 +1,6 @@
+timestamp_utc,scope,artifact_path,impact_level,event_id,note
+note: Phase14.6 CSV init (impact_registry)
+2026-02-24T03:18:00.855789+00:00,phase14_6,C:\Users\sirok\MoCKA\audit\ed25519\governance\governance.db,info,7ae5bedc9f46a897b8722a59d291979359a30e594a159b70aa0e6e6eb4c2b79f,note: Phase14.6 impact_registry append (latest TIP anchored)
+2026-02-24T03:44:51.759207+00:00,phase14_6_quarantine,C:\Users\sirok\MoCKA\audit\ed25519\quarantine\43a48e0cec2b8cba2f3b955f048223e1d5756784d64cdb5df40229592c96df2b.json,evidence,f7332104f8c4dee658ac95801ffe6bc38b54477682e17d1c6c44461d98aff5ba,note: Phase14.6 impact_registry append (artifact bound to latest TIP)
+2026-02-24T03:53:52.564768+00:00,phase14_6_completion,C:\Users\sirok\MoCKA\docs\PHASE14.6_DUAL_LAYER_GOVERNANCE_COMPLETION.md,institutional_record,8f38978cad2d92b726c8ae437e1fe92fb6dfb21e5e78ae47087c2b5dd26d7391,note: Phase14.6 completion document sealed and TIP-anchored
+2026-02-24T03:53:57.875205+00:00,phase14_6_completion,C:\Users\sirok\MoCKA\docs\PHASE14.6_DUAL_LAYER_GOVERNANCE_COMPLETION.md,institutional_record,8f38978cad2d92b726c8ae437e1fe92fb6dfb21e5e78ae47087c2b5dd26d7391,note: Phase14.6 completion document sealed and TIP-anchored

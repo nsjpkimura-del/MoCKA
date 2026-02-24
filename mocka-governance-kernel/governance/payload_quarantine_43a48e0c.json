@@ -1,0 +1,6 @@
+{
+  "target_event_id": "43a48e0cec2b8cba2f3b955f048223e1d5756784d64cdb5df40229592c96df2b",
+  "action": "quarantine",
+  "reason": "Phase14.6 reenactment: quarantine snapshot regenerated and sealed",
+  "snapshot_dir": "C:\\Users\\sirok\\MoCKA\\audit\\ed25519\\quarantine"
+}

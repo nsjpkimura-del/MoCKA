@@ -1,0 +1,6 @@
+{
+  "target_event_id": "43a48e0cec2b8cba2f3b955f048223e1d5756784d64cdb5df40229592c96df2b",
+  "from": "historical_test",
+  "to": "quarantined",
+  "reason": "Phase14.6 protocol reenactment: classification change decision sealed before proof-side operation"
+}
