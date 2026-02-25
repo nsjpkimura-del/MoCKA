@@ -1,27 +1,27 @@
-﻿name: mocka-phase17-determinism
+﻿# PHASE18 ENTRYPOINT
 
-on:
-  push:
-    branches: [ ""main"" ]
-  pull_request:
+## 0. Current Stable Anchor
+- stable tag: phase17-stable
+- verified determinism: tools/phase17_determinism_check.py PASS
 
-jobs:
-  determinism:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+## 1. Canonical Entry Points
+- verify: python verify/verify_all.py
+- determinism: python tools/phase17_determinism_check.py
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: ""3.12""
+## 2. Phase18 Mission (choose one as primary)
+A. Row-level signature (finance-grade)
+B. Multi-environment acceptance automation (repro across OS/Python)
+C. Multi-pack operational hardening (verify_packs real-world scaling)
 
-      - name: Install minimal deps
-        run: |
-          python -m pip install --upgrade pip
-          if [ -f requirements_ci_min.txt ]; then pip install -r requirements_ci_min.txt; fi
+## 3. Phase18 Start Rule
+- Always keep Phase17 stable guarantees green.
+- Any Phase18 change must preserve:
+  - STRICT_MANIFEST enforcement
+  - deterministic summary_hash
+  - CI determinism job PASS
 
-      - name: Run determinism check
-        run: |
-          python tools/phase17_determinism_check.py
+## 4. First Task (default)
+- Implement B: multi-environment acceptance automation via CI matrix.
+  - Windows + Ubuntu
+  - Python 3.12 and 3.13
+  - Run tools/phase17_determinism_check.py
