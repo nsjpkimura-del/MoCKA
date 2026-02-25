@@ -17,6 +17,11 @@ jobs:
         with:
           python-version: ""3.12""
 
+      - name: Install minimal deps
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements_ci_min.txt ]; then pip install -r requirements_ci_min.txt; fi
+
       - name: Run determinism check
         run: |
           python tools/phase17_determinism_check.py

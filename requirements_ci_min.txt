@@ -1,0 +1,3 @@
+﻿# Phase17 determinism CI minimum
+# Keep this minimal. Add only when CI fails.
+
