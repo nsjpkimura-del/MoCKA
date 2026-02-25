@@ -1,258 +1,82 @@
-\# PHASE15\_PROOF\_DICTIONARY
-
-Deterministic Governance → Proof Mutation Contract
-
-
-
-Status: DRAFT
-
-Tag: phase15-dictionary-v1
-
-
-
 ---
 
-
-
-\## 0. Purpose
-
-
-
-This document defines the canonical mapping between:
-
-
-
-Governance event\_type
-
-→ Deterministic Proof DB mutation
-
-
-
-No auto-apply is permitted unless defined here.
-
-
-
----
-
-
-
-\## 1. Global Invariants
-
-
-
-\- Governance DB is read-only.
-
-\- Proof DB mutations must be deterministic.
-
-\- All mutations must be idempotent.
-
-\- Every mutation must be reversible.
-
-\- Hash stability must be preserved.
-
-
-
----
-
-
-
-\## 2. Event Type Definitions
-
-
-
----
-
-
-
-\### event\_type: REGISTER\_BRANCH
-
-
+### event_type: REGISTER_BRANCH
 
 Target Table:
-
-branch\_registry
-
-
+branch_registry
 
 Deterministic Structure:
-
-\- branch\_id (TEXT PRIMARY KEY)
-
-\- governance\_event\_id (TEXT)
-
-\- created\_at (INTEGER)
-
-\- branch\_hash (TEXT)
-
-
+- id (INTEGER PRIMARY KEY AUTOINCREMENT)
+- created_utc (TEXT NOT NULL)
+- tip_event_id (TEXT NOT NULL)
+- orphan_event_id (TEXT NULL)
+- orphan_prev_id (TEXT NULL)
+- classification (TEXT NOT NULL)
 
 Idempotency Rule:
-
-INSERT OR IGNORE by branch\_id
-
-
+INSERT only when a new (tip_event_id, orphan_event_id, orphan_prev_id, classification) tuple is not already present.
+No UPDATE for this event_type. Existing equivalent row implies no-op.
 
 Conflict Resolution:
-
-If existing row hash != computed hash → mismatch
-
-
+If an equivalent tuple exists but classification differs, emit mismatch (do not apply).
 
 Reversibility:
-
-DELETE WHERE branch\_id = ?
-
-
+DELETE the inserted row by id (only if created by the current reconciliation attempt).
 
 Hash Stability:
-
-branch\_hash = SHA256(branch\_id + governance\_event\_id)
-
-
+No hash column in this table.
+Stability condition: deterministic tuple equality only.
 
 ---
 
-
-
-\### event\_type: CLOSE\_BRANCH
-
-
+### event_type: CLOSE_BRANCH
 
 Target Table:
-
-branch\_registry
-
-
+branch_registry
 
 Deterministic Structure:
-
-\- closed\_at (INTEGER)
-
-
+- id (INTEGER PRIMARY KEY AUTOINCREMENT)
+- created_utc (TEXT NOT NULL)
+- tip_event_id (TEXT NOT NULL)
+- orphan_event_id (TEXT NULL)
+- orphan_prev_id (TEXT NULL)
+- classification (TEXT NOT NULL)
 
 Idempotency Rule:
-
-UPDATE only if closed\_at IS NULL
-
-
+No-op (branch_registry has no close marker column).
 
 Conflict Resolution:
-
-If already closed → no-op
-
-
+Emit mismatch if governance emits CLOSE_BRANCH but no proof close-state exists.
+Do not apply.
 
 Reversibility:
-
-Set closed\_at = NULL
-
-
+Not applicable (no mutation).
 
 Hash Stability:
-
-No hash mutation allowed
-
-
+No hash column. No mutation.
 
 ---
 
-
-
-\### event\_type: ANCHOR\_PROOF
-
-
+### event_type: ANCHOR_PROOF
 
 Target Table:
-
-proof\_anchor
-
-
+proof_anchor
 
 Deterministic Structure:
-
-\- anchor\_id (TEXT PRIMARY KEY)
-
-\- governance\_event\_id (TEXT)
-
-\- anchor\_hash (TEXT)
-
-\- created\_at (INTEGER)
-
-
+- anchor_id (TEXT PRIMARY KEY)
+- governance_event_id (TEXT NOT NULL)
+- anchor_hash (TEXT NOT NULL)
+- created_utc (TEXT NOT NULL)
 
 Idempotency Rule:
-
-INSERT OR IGNORE by anchor\_id
-
-
+INSERT OR IGNORE by anchor_id
 
 Conflict Resolution:
-
-Hash mismatch → reconciliation required
-
-
+If target table is missing -> mismatch (do not apply).
+If existing row hash differs -> mismatch (do not apply).
 
 Reversibility:
-
-DELETE WHERE anchor\_id = ?
-
-
+DELETE WHERE anchor_id = ? (only if created by current reconciliation attempt)
 
 Hash Stability:
-
-anchor\_hash = SHA256(governance\_event\_id + anchor\_id)
-
-
-
----
-
-
-
-\## 3. Dictionary Freeze Rule
-
-
-
-Before enabling apply-mode:
-
-
-
-1\. Tag repository with:
-
-&nbsp;  phase15-dictionary-v1
-
-
-
-2\. Verify no modifications to this file.
-
-
-
----
-
-
-
-\## 4. Expansion Policy
-
-
-
-New event\_type must define:
-
-
-
-\- Target table
-
-\- Deterministic schema
-
-\- Idempotency
-
-\- Conflict resolution
-
-\- Reversibility
-
-\- Hash stability formula
-
-
-
-Without full definition:
-
-→ enforce-mode forbidden
-
+anchor_hash = SHA256(governance_event_id + anchor_id)
