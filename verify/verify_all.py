@@ -10,19 +10,16 @@ def _ensure_root_on_syspath():
 def main():
     _ensure_root_on_syspath()
 
-    # NOTE:
-    # ここに本来の検証ロジックがある前提。
-    # 現状はあなたの環境で動いている文言を維持する。
     print("VERIFY: existing verification logic executed")
 
-    # ---- MoCKA Phase17: deterministic summary rebuild (single call) ----
-    from verify.manifest_resolver import rebuild_summary_matrix
-    rebuild_summary_matrix()
-    # ------------------------------------------------------------------
-
-    # NOTE:
-    # OVERALL表示は既存に合わせる（PASS/FAILは本来検証結果で決める）
-    print("OVERALL: PASS")
+    try:
+        from verify.manifest_resolver import rebuild_summary_matrix
+        rebuild_summary_matrix(strict_manifest=True)
+        print("OVERALL: PASS")
+        return 0
+    except Exception as e:
+        print(f"OVERALL: FAIL ({e})")
+        return 2
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
