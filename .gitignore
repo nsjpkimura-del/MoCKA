@@ -1,50 +1,68 @@
-﻿# secrets and keys
-secrets/
-keys/secret/
-**/*.key
-**/*.pem
-**/*seed*
-**/*seckey*
+﻿# MoCKA: safety fence for generated artifacts / local state
 
-# env
-.env
-*.env
-.env.*
-
-# backups
-*.bak
-*.backup
-*.tmp
-
-# common
-.DS_Store
-node_modules/
+# Python
 __pycache__/
 *.pyc
-# virtualenv
+*.pyo
+*.pyd
 .venv/
 venv/
-app/.venv*/
-**/.venv*/
 
-# backups
-*.bak*
-*.quarantine_*
-*.backup
+# OS / editor
+.DS_Store
+Thumbs.db
 
-# logs
-logs/
-**/logs/
+# Logs / temp
 *.log
+*.bak_*
+*.tmp
 
-# windows noise
-desktop.ini
+# Lock / runtime
+execution.lock*
+last_event_id*
+last_event_id.txt
 
-# local keys cache (do not track)
-./keys/
+# Databases (must not be committed)
+**/*.db
+**/*.sqlite
+**/*.sqlite3
 
+# Audit event json dumps (local)
+audit/*.json
+audit/**/_quarantine/
+audit/**/quarantine/
+audit/**/quarantine_*/
+audit/**/quarantine_non_events/
+audit/**/quarantine_orphans/
+audit/**/quarantine_orphans_*/
+audit/**/recovery/
+audit/**/handover/
+audit/**/patch_plans/
+audit/**/decisions/
 
-# allow public verification key set under audit
-!audit/ed25519/keys/ed25519_public.key
-!audit/ed25519/keys/key_metadata.json
-!audit/ed25519/keys/key_policy_v1.0.md
+# Generated outbox / verify pack / extracts
+outbox/
+outbox/**
+
+# Acceptance runtime outputs
+acceptance/inbox/
+acceptance/quarantine/
+acceptance/quarantine/**
+acceptance/**/inbox_consumed/
+acceptance/**/inbox_consumed/**
+acceptance/**_pass.json
+acceptance/**_outfield_pass.json
+acceptance/**.txt
+
+# Backups / dumps
+backup/
+backup/**
+*dump*
+*schema_dump*
+db_ledger_dump.tsv
+
+# Allowlists (keep these tracked)
+!.gitignore
+!verify/**
+!tools/**
+!docs/**
