@@ -67,26 +67,6 @@ def reject_if_tokens_present(raw_text, context):
             die("reject token found in " + context + ": " + tok)
 
 
-def sealed_pack_info():
-    if os.path.exists(FREEZE_MANIFEST_PATH):
-        m = load_json(FREEZE_MANIFEST_PATH)
-        vp = m.get("verify_pack") or {}
-        zn = vp.get("zip_name")
-        hs = vp.get("sha256")
-        if zn and hs:
-            return {"zip_name": zn, "sha256": hs}
-
-    if os.path.exists(SUMMARY_MATRIX_PATH):
-        sm = load_json(SUMMARY_MATRIX_PATH)
-        ep = sm.get("external_pack") or {}
-        zn = ep.get("zip_name")
-        hs = ep.get("sha256")
-        if zn and hs:
-            return {"zip_name": zn, "sha256": hs}
-
-    die("sealed pack info not found (freeze_manifest.json or acceptance/summary_matrix.json)")
-
-
 def utc_iso_z_precise():
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
@@ -100,6 +80,34 @@ def coerce_dest_name(name):
         if not (ch.isalnum() or ch in ("-", "_")):
             die("dest name contains invalid char: " + ch)
     return base
+
+
+def sealed_pack_info():
+    if not os.path.exists(FREEZE_MANIFEST_PATH):
+        die("freeze_manifest.json not found: " + FREEZE_MANIFEST_PATH)
+
+    m = load_json(FREEZE_MANIFEST_PATH)
+
+    # v2: verify_packs: [...]
+    if isinstance(m, dict) and isinstance(m.get("verify_packs"), list):
+        packs = m.get("verify_packs")
+        if not packs:
+            die("freeze_manifest verify_packs empty")
+        p0 = packs[0] or {}
+        zn = p0.get("zip_name")
+        hs = p0.get("sha256")
+        if zn and hs:
+            return {"zip_name": zn, "sha256": hs}
+        die("freeze_manifest verify_packs[0] missing zip_name/sha256")
+
+    # v1: verify_pack: {...}
+    vp = m.get("verify_pack") or {}
+    zn = vp.get("zip_name")
+    hs = vp.get("sha256")
+    if zn and hs:
+        return {"zip_name": zn, "sha256": hs}
+
+    die("sealed pack info not found in freeze_manifest.json")
 
 
 def normalize_outfield_to_v2(obj, filename_hint):
@@ -116,7 +124,7 @@ def normalize_outfield_to_v2(obj, filename_hint):
             row["file"] = filename_hint
         return row, None
 
-    # v1 legacy nested
+    # v1 legacy
     env = obj.get("environment")
     pack = obj.get("pack")
     res = obj.get("result")
@@ -137,6 +145,20 @@ def normalize_outfield_to_v2(obj, filename_hint):
         return row, None
 
     return None, "not outfield kind"
+
+
+def normalize_internal(obj, filename_hint):
+    if not isinstance(obj, dict):
+        return None, "not an object"
+    if obj.get("kind") != "internal":
+        return None, "not internal kind"
+    row = {
+        "file": filename_hint,
+        "kind": "internal",
+        "overall_status": obj.get("overall_status"),
+        "started_utc": obj.get("started_utc"),
+    }
+    return row, None
 
 
 def require_fields(row, fields):
@@ -181,67 +203,86 @@ def validate_row_outfield_v2(row, sealed):
     reject_if_tokens_present(json.dumps(row, ensure_ascii=True), "row_outfield values")
 
 
-def load_previous_internal_rows():
+def validate_row_internal(row):
+    ok, missing = require_fields(row, ["kind", "file", "overall_status", "started_utc"])
+    if not ok:
+        die("missing required fields: " + ", ".join(missing))
+    if row.get("kind") != "internal":
+        die("kind must be internal")
+    if row.get("overall_status") != "PASS":
+        die("overall_status must be PASS")
+    reject_if_tokens_present(json.dumps(row, ensure_ascii=True), "row_internal values")
+
+
+def get_external_generated_utc_fallback():
     if not os.path.exists(SUMMARY_MATRIX_PATH):
-        return []
+        return "UNKNOWN"
     try:
         prev = load_json(SUMMARY_MATRIX_PATH)
-        rows = prev.get("rows_internal")
-        if isinstance(rows, list):
-            return rows
+        ep = prev.get("external_pack") or {}
+        if isinstance(ep, dict) and ep.get("generated_utc"):
+            return ep.get("generated_utc")
     except Exception:
-        return []
-    return []
+        return "UNKNOWN"
+    return "UNKNOWN"
 
 
-def try_load_consumed_outfield_v2(path, filename):
+def try_load_consumed_row(path, filename):
     raw = None
     try:
         raw = read_text(path)
         reject_if_tokens_present(raw, "consumed file")
         obj = json.loads(raw)
+
+        if isinstance(obj, dict) and obj.get("kind") == "internal":
+            row, err = normalize_internal(obj, filename)
+            if row is None:
+                return None, None, err
+            row["file"] = filename
+            return row, "internal", None
+
         row, err = normalize_outfield_to_v2(obj, filename)
         if row is None:
-            return None, err
+            return None, None, err
         if row.get("kind") != "outfield":
-            return None, "not outfield kind"
-        row2 = dict(row)
-        row2["file"] = filename
-        return row2, None
+            return None, None, "not kind outfield"
+        row["file"] = filename
+        return row, "outfield", None
+
     except Exception as e:
         if raw is not None:
-            return None, "json/normalize failed: " + str(e)
-        return None, "read/decode failed: " + str(e)
+            return None, None, "json/normalize failed: " + str(e)
+        return None, None, "read/decode failed: " + str(e)
 
 
 def build_summary_matrix(verbose=False):
     sealed = sealed_pack_info()
 
     rows_outfield = []
+    rows_internal = []
     errors = []
 
     if os.path.isdir(CONSUMED_DIR):
         for fn in sorted(os.listdir(CONSUMED_DIR)):
+
             if not fn.lower().endswith(".json"):
                 continue
+
+            if fn.lower().endswith(".orig.json"):
+                continue
+
             p = os.path.join(CONSUMED_DIR, fn)
-            row, err = try_load_consumed_outfield_v2(p, fn)
+            row, kind, err = try_load_consumed_row(p, fn)
             if row is None:
                 errors.append({"file": fn, "error": err})
                 continue
+
+            if kind == "internal":
+                validate_row_internal(row)
+                rows_internal.append(row)
+                continue
+
             rows_outfield.append(row)
-
-    rows_internal = load_previous_internal_rows()
-
-    external_generated_utc = "UNKNOWN"
-    if os.path.exists(SUMMARY_MATRIX_PATH):
-        try:
-            prev = load_json(SUMMARY_MATRIX_PATH)
-            ep = prev.get("external_pack") or {}
-            if isinstance(ep, dict) and ep.get("generated_utc"):
-                external_generated_utc = ep.get("generated_utc")
-        except Exception:
-            pass
 
     matrix = {
         "generated_at_utc": utc_iso_z_precise(),
@@ -252,7 +293,7 @@ def build_summary_matrix(verbose=False):
         "external_pack": {
             "zip_name": sealed["zip_name"],
             "sha256": sealed["sha256"],
-            "generated_utc": external_generated_utc,
+            "generated_utc": get_external_generated_utc_fallback(),
         },
     }
 
@@ -276,7 +317,6 @@ def accept_one(input_json, dest_name_without_ext):
     reject_if_tokens_present(raw, "input_json")
     obj = json.loads(raw)
 
-    sealed = sealed_pack_info()
     dest_name = coerce_dest_name(dest_name_without_ext)
     dest_filename = dest_name + ".json"
     dest_path = os.path.join(CONSUMED_DIR, dest_filename)
@@ -284,6 +324,32 @@ def accept_one(input_json, dest_name_without_ext):
     if os.path.exists(dest_path):
         die("dest already exists: " + dest_path)
 
+    # internal accept
+    if isinstance(obj, dict) and obj.get("kind") == "internal":
+        row, err = normalize_internal(obj, dest_filename)
+        if row is None:
+            die("invalid internal json: " + str(err))
+        row["file"] = dest_filename
+        validate_row_internal(row)
+        write_json(dest_path, row)
+
+        try:
+            abs_in = os.path.abspath(input_json)
+            abs_inbox = os.path.abspath(INBOX_DIR)
+            if os.path.commonpath([abs_in, abs_inbox]) == abs_inbox:
+                os.remove(input_json)
+        except Exception:
+            pass
+
+        matrix = build_summary_matrix(verbose=False)
+        print("OK: accepted internal PASS")
+        print("WROTE:", dest_path)
+        print("UPDATED:", SUMMARY_MATRIX_PATH)
+        print("count_internal:", matrix.get("count_internal"))
+        return
+
+    # outfield accept
+    sealed = sealed_pack_info()
     row, err = normalize_outfield_to_v2(obj, dest_filename)
     if row is None:
         die("invalid outfield json: " + str(err))
@@ -293,7 +359,6 @@ def accept_one(input_json, dest_name_without_ext):
     row_out["kind"] = "outfield"
 
     validate_row_outfield_v2(row_out, sealed)
-
     write_json(dest_path, row_out)
 
     try:
@@ -325,8 +390,11 @@ def normalize_consumed(filename):
 
     raw = read_text(path)
     reject_if_tokens_present(raw, "consumed file")
-
     obj = json.loads(raw)
+
+    if isinstance(obj, dict) and obj.get("kind") == "internal":
+        die("normalize-consumed not supported for internal (already normalized)")
+
     row, err = normalize_outfield_to_v2(obj, fn)
     if row is None:
         die("cannot normalize: " + str(err))
@@ -335,8 +403,6 @@ def normalize_consumed(filename):
     row_out = dict(row)
     row_out["file"] = fn
     row_out["kind"] = "outfield"
-
-    # NOTE: normalize only if it is a PASS and sealed pack matches
     validate_row_outfield_v2(row_out, sealed)
 
     backup = path + ".orig.json"
