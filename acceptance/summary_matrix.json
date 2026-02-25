@@ -1,0 +1,52 @@
+{
+  "generated_at_utc": "2026-02-25T04:41:21.049632Z",
+  "count_internal": 0,
+  "count_outfield": 3,
+  "rows_internal": [],
+  "rows_outfield": [
+    {
+      "file": "linux_py312_outfield_pass.json",
+      "kind": "outfield",
+      "pack_zip_name": "mocka_phase17pre_verify_pack_20260225_032005.zip",
+      "pack_sha256": "A0221149435F18D7EEC1B63BB4E6059927DBF8F356FA8A1E17DF29CFAE115B78",
+      "os": "Linux",
+      "python": "3.12",
+      "machine": "LINUX_HOST",
+      "submitted_utc": "2026-02-25T04:34:39Z",
+      "overall_status": "PASS",
+      "started_utc": "2026-02-25T04:34:39Z",
+      "run_id": "linux_py312_test_001"
+    },
+    {
+      "file": "win_py313_outfield_pass.json",
+      "kind": "outfield",
+      "pack_zip_name": "mocka_phase17pre_verify_pack_20260225_032005.zip",
+      "pack_sha256": "A0221149435F18D7EEC1B63BB4E6059927DBF8F356FA8A1E17DF29CFAE115B78",
+      "os": "Windows",
+      "python": "3.13",
+      "machine": "MAM",
+      "submitted_utc": "2026-02-25T03:59:30Z",
+      "overall_status": "PASS",
+      "started_utc": "2026-02-25T03:59:30Z",
+      "run_id": "local_dummy_001"
+    },
+    {
+      "file": "win_py313_outfield_pass.json.orig.json",
+      "kind": "outfield",
+      "pack_zip_name": "mocka_phase17pre_verify_pack_20260225_032005.zip",
+      "pack_sha256": "A0221149435F18D7EEC1B63BB4E6059927DBF8F356FA8A1E17DF29CFAE115B78",
+      "os": "Windows",
+      "python": "3.13",
+      "machine": "MAM",
+      "submitted_utc": "2026-02-25T03:59:30Z",
+      "overall_status": "PASS",
+      "started_utc": "2026-02-25T03:59:30Z",
+      "run_id": "local_dummy_001"
+    }
+  ],
+  "external_pack": {
+    "zip_name": "mocka_phase17pre_verify_pack_20260225_032005.zip",
+    "sha256": "A0221149435F18D7EEC1B63BB4E6059927DBF8F356FA8A1E17DF29CFAE115B78",
+    "generated_utc": "2026-02-25T03:21:34Z"
+  }
+}
