@@ -1,29 +1,30 @@
-{
-  "note": [
-    "NOTE: freeze_manifest v2",
-    "NOTE: verify_packs is authoritative list for acceptance pipeline",
-    "NOTE: this file is a freeze artifact; edit only via explicit promotion procedure"
-  ],
-  "phase": "Phase17-Pre-Stable",
-  "freeze_utc": "2026-02-25T04:50:15Z",
-  "verify_packs": [
-    {
-      "zip_name": "mocka_phase17pre_verify_pack_20260225_032005.zip",
-      "sha256": "A0221149435F18D7EEC1B63BB4E6059927DBF8F356FA8A1E17DF29CFAE115B78"
-    }
-  ],
-  "files": {
-    "verify_all_py": {
-      "path": "verify\\verify_all.py",
-      "sha256": "56691BC892A61E66BB89F02BA607053B4F626A51ABA73DD2DBEE0680F496021D"
-    },
-    "accept_outfield_pass_py": {
-      "path": "verify\\accept_outfield_pass.py",
-      "sha256": "E2E478F236C067858E95836C0A63EF9BA274E8C7DFA2484115263CCFA354D67F"
-    },
-    "summary_matrix_json": {
-      "path": "acceptance\\summary_matrix.json",
-      "sha256": "8B6244216C1A7512C568FB7831B441FA7C87F1483FE95832F0C659D888F7550A"
-    }
-  }
+﻿{
+    "note":  [
+                 "NOTE: freeze_manifest v2",
+                 "NOTE: verify_packs is authoritative list for acceptance pipeline",
+                 "NOTE: this file is a freeze artifact; edit only via explicit promotion procedure"
+             ],
+    "phase":  "Phase17-Pre-Stable",
+    "freeze_utc":  "2026-02-25T04:50:15Z",
+    "verify_packs":  [
+                         {
+                             "zip_name":  "mocka_phase17pre_verify_pack_20260225_032005.zip",
+                             "sha256":  "A0221149435F18D7EEC1B63BB4E6059927DBF8F356FA8A1E17DF29CFAE115B78",
+                             "path":  "acceptance\\win_py313_outfield_pass.json"
+                         }
+                     ],
+    "files":  {
+                  "verify_all_py":  {
+                                        "path":  "verify\\verify_all.py",
+                                        "sha256":  "56691BC892A61E66BB89F02BA607053B4F626A51ABA73DD2DBEE0680F496021D"
+                                    },
+                  "accept_outfield_pass_py":  {
+                                                  "path":  "verify\\accept_outfield_pass.py",
+                                                  "sha256":  "E2E478F236C067858E95836C0A63EF9BA274E8C7DFA2484115263CCFA354D67F"
+                                              },
+                  "summary_matrix_json":  {
+                                              "path":  "acceptance\\summary_matrix.json",
+                                              "sha256":  "8B6244216C1A7512C568FB7831B441FA7C87F1483FE95832F0C659D888F7550A"
+                                          }
+              }
 }
