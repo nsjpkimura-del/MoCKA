@@ -9,8 +9,13 @@
     "verify_packs":  [
                          {
                              "zip_name":  "mocka_phase17pre_verify_pack_20260225_032005.zip",
-                             "sha256":  "A0221149435F18D7EEC1B63BB4E6059927DBF8F356FA8A1E17DF29CFAE115B78",
-                             "path":  "acceptance\\win_py313_outfield_pass.json"
+                             "sha256":  "c4574dba7093adc9893e1a0d4aa920f7487d75e087e858c6b5146976c2a70184",
+                             "path":  "acceptance\\win_py313_outfield_pass_wrapped_signed.json"
+                         },
+                         {
+                             "sha256":  "c4574dba7093adc9893e1a0d4aa920f7487d75e087e858c6b5146976c2a70184",
+                             "path":  "acceptance\\phase18_multipack_pack1_copy_wrapped_v2.json",
+                             "authoritative":  false
                          }
                      ],
     "files":  {
