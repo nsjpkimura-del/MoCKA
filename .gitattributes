@@ -1,1 +1,6 @@
 ﻿* text=auto eol=lf
+governance/history/*.md text eol=lf
+governance/spec/*.md text eol=lf
+governance/templates/*.md text eol=lf
+governance/*.csv text eol=lf
+tools/*.py text eol=lf
