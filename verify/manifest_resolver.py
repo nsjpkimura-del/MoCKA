@@ -1,151 +1,170 @@
+# verify/manifest_resolver.py
+# Phase20 Unified STRICT Resolver
+# - wrapper v2 ONLY
+# - payload_hash STRICT
+# - Ed25519 row signature STRICT
+# - public key registry required
+# - deterministic canonical json
+
+from __future__ import annotations
+
 import json
-import hashlib
-import os
+import sys
+from hashlib import sha256
 from pathlib import Path
+from typing import Any, Dict
 
-from verify.row_sign import verify_row_soft
-
-ROOT = Path(__file__).resolve().parent.parent
-
-
-def load_json(p: Path):
-    return json.loads(p.read_text(encoding="utf-8-sig"))
+from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
+from cryptography.hazmat.primitives import serialization
 
 
-def write_json(p: Path, obj):
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(obj, indent=2, ensure_ascii=False), encoding="utf-8")
+ROOT = Path(__file__).resolve().parents[1]
+REGISTRY_PATH = ROOT / "keys" / "public_keys.json"
 
 
-def sha256_hex_bytes(b: bytes) -> str:
-    return hashlib.sha256(b).hexdigest()
+# ---------------------------------------------------------
+# Canonical JSON
+# ---------------------------------------------------------
+
+def canonical_json_bytes(obj: Any) -> bytes:
+    s = json.dumps(
+        obj,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+    return s.encode("utf-8")
 
 
-def canonical_json_bytes(obj) -> bytes:
-    return json.dumps(obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
+def sha256_hex(data: bytes) -> str:
+    return sha256(data).hexdigest()
 
 
-def resolve_pack_priority(manifest):
-    packs = manifest.get("verify_packs", [])
-    resolved = []
+# ---------------------------------------------------------
+# Key Registry
+# ---------------------------------------------------------
 
-    for idx, p in enumerate(packs):
-        priority = idx
-        if p.get("authoritative") is True:
-            priority = -1
-
-        resolved.append({
-            "priority": int(priority),
-            "sha256": str(p.get("sha256", "")),
-            "path": str(p.get("path", "")),
-        })
-
-    resolved.sort(key=lambda x: (x["priority"], x["sha256"]))
-    return resolved
+def load_registry() -> Dict[str, Any]:
+    if not REGISTRY_PATH.exists():
+        raise FileNotFoundError(f"registry not found: {REGISTRY_PATH}")
+    return json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
 
 
-def verify_wrapper_payload(wrapper, errors, pack_path):
+def resolve_public_key(key_id: str) -> Ed25519PublicKey:
+    registry = load_registry()
+
+    keys = registry.get("keys", {})
+    if key_id not in keys:
+        raise ValueError(f"unknown key_id: {key_id}")
+
+    rel_path = keys[key_id].get("public_pem_path", "")
+    if not rel_path:
+        raise ValueError(f"public_pem_path missing for key_id: {key_id}")
+
+    pub_path = ROOT / rel_path
+    if not pub_path.exists():
+        raise FileNotFoundError(f"public key file missing: {pub_path}")
+
+    pem = pub_path.read_bytes()
+    pk = serialization.load_pem_public_key(pem)
+
+    if not isinstance(pk, Ed25519PublicKey):
+        raise TypeError("loaded key is not Ed25519")
+
+    return pk
+
+
+# ---------------------------------------------------------
+# Verification Core
+# ---------------------------------------------------------
+
+def verify_payload_hash(wrapper: Dict[str, Any]) -> None:
     payload = wrapper.get("payload")
-    payload_hash = wrapper.get("payload_hash")
-
     if payload is None:
-        errors.append(f"WRAPPER_NO_PAYLOAD: {pack_path}")
-        return
+        raise ValueError("wrapper.payload missing")
 
-    computed = sha256_hex_bytes(canonical_json_bytes(payload))
-    if computed != payload_hash:
-        errors.append(f"WRAPPER_PAYLOAD_HASH_MISMATCH: {pack_path}")
+    expected = wrapper.get("payload_hash", "")
+    if not isinstance(expected, str) or len(expected) != 64:
+        raise ValueError("invalid payload_hash")
 
+    actual = sha256_hex(canonical_json_bytes(payload))
 
-def verify_row_signature(row, secret, errors):
-    row_id = row.get("row_id")
-    if not row_id:
-        errors.append("ROW_NO_ID")
-        return
-
-    if "row_sig" not in row:
-        errors.append(f"ROW_NO_SIGNATURE: row_id={row_id}")
-        return
-
-    if not secret:
-        errors.append(f"ROW_SIG_SECRET_MISSING: row_id={row_id}")
-        return
-
-    ok, _ = verify_row_soft(row, str(row.get("row_sig")), secret)
-    if not ok:
-        errors.append(f"ROW_SIG_FAIL: row_id={row_id}")
-
-
-def rebuild_summary_matrix(strict_manifest=True):
-    manifest_path = ROOT / "freeze_manifest.json"
-    summary_path = ROOT / "acceptance" / "summary_matrix.json"
-
-    manifest = load_json(manifest_path)
-    packs = resolve_pack_priority(manifest)
-
-    errors = []
-    row_index = {}
-
-    secret = os.environ.get("MOCKA_ROW_SIG_SECRET", "")
-
-    for pack in packs:
-        pack_file = ROOT / pack["path"]
-
-        if not pack_file.exists():
-            errors.append(f"NOT_FOUND: {pack_file}")
-            continue
-
-        wrapper = load_json(pack_file)
-
-        verify_wrapper_payload(wrapper, errors, pack["path"])
-
-        rows = wrapper.get("rows", [])
-        if not isinstance(rows, list):
-            errors.append(f"WRAPPER_ROWS_INVALID: {pack['path']}")
-            continue
-
-        for row in rows:
-            verify_row_signature(row, secret, errors)
-
-            candidate = {
-                "pack_priority": pack["priority"],
-                "pack_sha256": pack["sha256"],
-                "row_sha256": sha256_hex_bytes(canonical_json_bytes(row)),
-                "row": row,
-            }
-
-            row_index.setdefault(row["row_id"], []).append(candidate)
-
-    resolved_rows = {}
-
-    for row_id, candidates in row_index.items():
-        candidates.sort(
-            key=lambda c: (
-                c["pack_priority"],
-                c["pack_sha256"],
-                c["row_sha256"],
-            )
+    if actual != expected:
+        raise ValueError(
+            f"payload_hash mismatch\nexpected={expected}\nactual  ={actual}"
         )
-        resolved_rows[row_id] = candidates[0]["row"]
 
-    summary = {
-        "phase": manifest.get("phase"),
-        "row_count": len(resolved_rows),
-        "rows": resolved_rows,
-        "manifest_errors": errors,
-    }
 
-    summary_hash = sha256_hex_bytes(canonical_json_bytes(summary))
-    summary["summary_hash"] = summary_hash
+def verify_rows(wrapper: Dict[str, Any]) -> None:
+    rows = wrapper.get("rows")
+    if not isinstance(rows, list):
+        raise ValueError("wrapper.rows must be list")
 
-    write_json(summary_path, summary)
+    for idx, row in enumerate(rows):
+        if not isinstance(row, dict):
+            raise ValueError(f"row[{idx}] invalid")
 
-    print("OK: deterministic summary rebuilt")
-    print(f"SUMMARY_HASH: {summary_hash}")
+        alg = row.get("row_sig_alg")
+        if alg != "ed25519":
+            raise ValueError(f"row[{idx}] invalid row_sig_alg")
 
-    if strict_manifest and errors:
-        raise RuntimeError("STRICT_MANIFEST_FAIL: " + " | ".join(errors))
+        key_id = row.get("key_id")
+        if not isinstance(key_id, str) or len(key_id) != 64:
+            raise ValueError(f"row[{idx}] invalid key_id")
+
+        sig_hex = row.get("row_sig")
+        if not isinstance(sig_hex, str) or len(sig_hex) == 0:
+            raise ValueError(f"row[{idx}] invalid row_sig")
+
+        try:
+            sig = bytes.fromhex(sig_hex)
+        except Exception:
+            raise ValueError(f"row[{idx}] row_sig hex decode failed")
+
+        pk = resolve_public_key(key_id)
+
+        # Remove signature fields before canonicalization
+        row_for_verify = dict(row)
+        row_for_verify.pop("row_sig", None)
+        row_for_verify.pop("row_sig_alg", None)
+        row_for_verify.pop("key_id", None)
+
+        msg = canonical_json_bytes(row_for_verify)
+
+        try:
+            pk.verify(sig, msg)
+        except Exception:
+            raise ValueError(f"row[{idx}] signature verification failed")
+
+
+def verify_wrapper(wrapper: Dict[str, Any]) -> None:
+    if wrapper.get("schema") != "mocka.pack.wrapper.signed.v2":
+        raise ValueError("unsupported schema")
+
+    verify_payload_hash(wrapper)
+    verify_rows(wrapper)
+
+
+# ---------------------------------------------------------
+# CLI
+# ---------------------------------------------------------
+
+def main() -> int:
+    import argparse
+
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--wrapper", required=True)
+    args = ap.parse_args()
+
+    path = Path(args.wrapper)
+    wrapper = json.loads(path.read_text(encoding="utf-8"))
+
+    verify_wrapper(wrapper)
+
+    print("STRICT_OK")
+    print(f"wrapper={path}")
+    return 0
 
 
 if __name__ == "__main__":
-    rebuild_summary_matrix(strict_manifest=True)
+    raise SystemExit(main())

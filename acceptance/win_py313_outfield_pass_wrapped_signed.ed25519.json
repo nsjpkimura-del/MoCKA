@@ -1,0 +1,34 @@
+{
+  "pack_sha256": "8bb0ce42885e31a8214100acda6d8719ebf94816901edf8689086b0e44b65c38",
+  "payload": {
+    "environment": {
+      "machine": "MAM",
+      "os": "Windows",
+      "python": "3.13"
+    },
+    "notes": "local dummy submission for pipeline test",
+    "pack": {
+      "sha256": "A0221149435F18D7EEC1B63BB4E6059927DBF8F356FA8A1E17DF29CFAE115B78",
+      "zip_name": "mocka_phase17pre_verify_pack_20260225_032005.zip"
+    },
+    "result": {
+      "overall_status": "PASS",
+      "started_utc": "2026-02-25T03:59:30Z"
+    },
+    "run_id": "local_dummy_001",
+    "submitted_utc": "2026-02-25T03:59:30Z"
+  },
+  "payload_hash": "9cf2b45bd0875414a0d772611b96c1da6f6da2f6d4595a92956c61fe2a02633f",
+  "rows": [
+    {
+      "key_id": "93ee18e0f3f5f9d893846de82399794b7719d6cbb51245e02ca9569df6e03f0d",
+      "pack_sha256": "8bb0ce42885e31a8214100acda6d8719ebf94816901edf8689086b0e44b65c38",
+      "payload_hash": "9cf2b45bd0875414a0d772611b96c1da6f6da2f6d4595a92956c61fe2a02633f",
+      "row_id": "pack:8bb0ce42885e31a8214100acda6d8719ebf94816901edf8689086b0e44b65c38",
+      "row_sig": "9b7355fc92a8b94501548bea03579ec984e5d402d3b721e854f8a460a1ee7d00197775dde5e6332e219ba3387dfe30d11277b0f777d3cd5462de5b4e9c51eb07",
+      "row_sig_alg": "ed25519",
+      "source_path": "acceptance/phase18_multipack_pack1_copy.json"
+    }
+  ],
+  "schema": "mocka.pack.wrapper.signed.v2"
+}

@@ -1,68 +1,30 @@
-﻿# MoCKA: safety fence for generated artifacts / local state
+﻿# -----------------------------
+# MoCKA Strict Ignore Policy
+# -----------------------------
 
 # Python
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
+
+# Virtualenv
 .venv/
 venv/
 
-# OS / editor
-.DS_Store
+# OS
+desktop.ini
 Thumbs.db
 
-# Logs / temp
-*.log
-*.bak_*
-*.tmp
+# Secrets (never commit)
+secrets/
+*.key
 
-# Lock / runtime
-execution.lock*
-last_event_id*
-last_event_id.txt
+# Phase20: Ed25519 private keys
+keys/private/
 
-# Databases (must not be committed)
-**/*.db
-**/*.sqlite
-**/*.sqlite3
+# Allow public keys only
+!keys/public/
+!keys/public/*.pem
 
-# Audit event json dumps (local)
-audit/*.json
-audit/**/_quarantine/
-audit/**/quarantine/
-audit/**/quarantine_*/
-audit/**/quarantine_non_events/
-audit/**/quarantine_orphans/
-audit/**/quarantine_orphans_*/
-audit/**/recovery/
-audit/**/handover/
-audit/**/patch_plans/
-audit/**/decisions/
-
-# Generated outbox / verify pack / extracts
-outbox/
-outbox/**
-
-# Acceptance runtime outputs
-acceptance/inbox/
-acceptance/quarantine/
-acceptance/quarantine/**
-acceptance/**/inbox_consumed/
-acceptance/**/inbox_consumed/**
-acceptance/**_pass.json
-acceptance/**_outfield_pass.json
-acceptance/**.txt
-
-# Backups / dumps
-backup/
-backup/**
-*dump*
-*schema_dump*
-db_ledger_dump.tsv
-
-# Allowlists (keep these tracked)
-!.gitignore
-!verify/**
-!tools/**
-!docs/**
+# Registry allowed
+!keys/public_keys.json

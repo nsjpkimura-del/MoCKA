@@ -1,0 +1,11 @@
+{
+  "keys": {
+    "93ee18e0f3f5f9d893846de82399794b7719d6cbb51245e02ca9569df6e03f0d": {
+      "created_at_utc": "2026-02-26T00:04:33+00:00",
+      "key_id": "93ee18e0f3f5f9d893846de82399794b7719d6cbb51245e02ca9569df6e03f0d",
+      "public_pem_path": "keys/public/ed25519_93ee18e0f3f5f9d893846de82399794b7719d6cbb51245e02ca9569df6e03f0d.pem",
+      "status": "active"
+    }
+  },
+  "schema": "mocka.keys.ed25519.registry.v1"
+}
