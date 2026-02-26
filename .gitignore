@@ -1,6 +1,6 @@
-﻿# -----------------------------
-# MoCKA Strict Ignore Policy
-# -----------------------------
+﻿# ---------------------------------
+# MoCKA Strict Repository Policy
+# ---------------------------------
 
 # Python
 __pycache__/
@@ -14,8 +14,50 @@ venv/
 # OS
 desktop.ini
 Thumbs.db
+.DS_Store
 
-# Secrets (never commit)
+# Logs / temp
+*.log
+*.tmp
+*.bak_*
+
+# Runtime lock
+execution.lock*
+last_event_id*
+last_event_id.txt
+
+# Databases
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+
+# Audit runtime dumps
+audit/*.json
+audit/**/_quarantine/
+audit/**/quarantine/
+audit/**/quarantine_*/
+audit/**/quarantine_non_events/
+audit/**/quarantine_orphans/
+audit/**/recovery/
+audit/**/handover/
+audit/**/patch_plans/
+audit/**/decisions/
+
+# Generated outbox
+outbox/
+
+# Acceptance runtime outputs
+acceptance/inbox/
+acceptance/quarantine/
+acceptance/**/inbox_consumed/
+
+# Backups
+backup/
+*dmp*
+*dump*
+*schema_dump*
+
+# Secrets
 secrets/
 *.key
 
@@ -26,5 +68,13 @@ keys/private/
 !keys/public/
 !keys/public/*.pem
 
-# Registry allowed
+# Allow registry
 !keys/public_keys.json
+
+# Keep core tracked directories
+!.gitignore
+!verify/**
+!tools/**
+!docs/**
+!contracts/**
+!config/**
