@@ -78,3 +78,10 @@ keys/private/
 !docs/**
 !contracts/**
 !config/**.wsl_ots_venv/
+_untracked_stash_*/
+.wsl_ots_venv/
+__pycache__/
+*.pyc
+
+# keys: private material must never be tracked
+governance/keys/*.private.pem
