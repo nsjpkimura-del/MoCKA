@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "generated_from": "governance/history_index.csv",
+  "count": 5,
+  "items": [
+    {
+      "event_id": "",
+      "date": "2026-02-26",
+      "event_type": "ARCH_DECISION",
+      "title_20": "Phase22封印確定",
+      "summary_100": "Gitツリー基準封印へ移行し監査耐性を確立",
+      "importance": "A",
+      "status": "Active",
+      "canonical_path": "governance/history/REC-260226-0001.md",
+      "content_hash": "sha256:3dcf1ebfd0147a9fd826e4c2cdcd57fd62d0ea84edfbf65812ea79a87f9c3f13"
+    },
+    {
+      "event_id": "",
+      "date": "2026-02-26",
+      "event_type": "META_GOV",
+      "title_20": "長期記憶器起動",
+      "summary_100": "Decision Unit三層の器を起動し運用開始",
+      "importance": "A",
+      "status": "Active",
+      "canonical_path": "governance/history/REC-260226-0002.md",
+      "content_hash": "sha256:96a2219d2131ff96707fee3710a2826527e30e17c69d72a274963d80844829d4"
+    },
+    {
+      "event_id": "",
+      "date": "2026-02-26",
+      "event_type": "POLICY_CHANGE",
+      "title_20": "anchor代替封印",
+      "summary_100": "anchor_record.jsonをcalc外しsha256で改変検知",
+      "importance": "A",
+      "status": "Active",
+      "canonical_path": "governance/history/REC-260226-0003.md",
+      "content_hash": "sha256:cbe3dffc88cb38227c8b4949c7661b706ab8bc2ce4a61996dcd265b846acd733"
+    },
+    {
+      "event_id": "",
+      "date": "2026-02-26",
+      "event_type": "ARCH_DECISION",
+      "title_20": "Gitツリー算出移行",
+      "summary_100": "calc_summary_hashをsealing_commitツリー基準へ移行",
+      "importance": "A",
+      "status": "Active",
+      "canonical_path": "governance/history/REC-260226-0004.md",
+      "content_hash": "sha256:ff85bbe5b984bf820b7dcf8cf617147ded9bb61dbd59f865ee7ae82f8a74909d"
+    },
+    {
+      "event_id": "",
+      "date": "2026-02-26",
+      "event_type": "POLICY_CHANGE",
+      "title_20": "公開要約規約",
+      "summary_100": "共有層の公開フィールドを固定し機密を排除",
+      "importance": "A",
+      "status": "Active",
+      "canonical_path": "governance/history/REC-260226-0005.md",
+      "content_hash": "sha256:b1353f3bf33e1c9a1266582534189e7db202bb1dc1019556b7cc7e8fa8d5f1db"
+    }
+  ]
+}
