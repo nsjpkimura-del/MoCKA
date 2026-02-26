@@ -7,7 +7,7 @@ import os
 import re
 import subprocess
 import sys
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Optional
 
 RE_EVENT_ID = re.compile(r"^EVT-(\d{4})-(\d{6})$")
 
@@ -155,6 +155,14 @@ def run_git(args: List[str]) -> None:
         die("git command failed")
 
 
+def read_optional_file(path: Optional[str]) -> str:
+    if not path:
+        return ""
+    if not os.path.exists(path):
+        die(f"file not found: {path}")
+    return read_text(path)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Create a Decision Unit record (Index + Canonical).")
     ap.add_argument("--title", required=True, help="short title (<=20 chars for index)")
@@ -186,6 +194,14 @@ def main() -> None:
     ap.add_argument("--impact", default="")
     ap.add_argument("--implementation", default="")
     ap.add_argument("--revalidation", default="")
+
+    ap.add_argument("--context-file", default="")
+    ap.add_argument("--options-file", default="")
+    ap.add_argument("--decision-file", default="")
+    ap.add_argument("--rationale-file", default="")
+    ap.add_argument("--impact-file", default="")
+    ap.add_argument("--implementation-file", default="")
+    ap.add_argument("--revalidation-file", default="")
     ns = ap.parse_args()
 
     date_iso = parse_date(ns.date)
@@ -201,6 +217,14 @@ def main() -> None:
         die(f"template not found: {ns.template}")
     tpl = read_text(ns.template)
 
+    context = ns.context if ns.context else read_optional_file(ns.context_file)
+    options = ns.options if ns.options else read_optional_file(ns.options_file)
+    decision = ns.decision if ns.decision else read_optional_file(ns.decision_file)
+    rationale = ns.rationale if ns.rationale else read_optional_file(ns.rationale_file)
+    impact = ns.impact if ns.impact else read_optional_file(ns.impact_file)
+    implementation = ns.implementation if ns.implementation else read_optional_file(ns.implementation_file)
+    revalidation = ns.revalidation if ns.revalidation else read_optional_file(ns.revalidation_file)
+
     mapping = {
         "event_id": event_id,
         "date": date_iso,
@@ -209,13 +233,13 @@ def main() -> None:
         "status": ns.status,
         "title": ns.title.replace('"', "'"),
         "summary": ns.summary.replace('"', "'"),
-        "context": ns.context,
-        "options": ns.options,
-        "decision": ns.decision,
-        "rationale": ns.rationale,
-        "impact": ns.impact,
-        "implementation": ns.implementation,
-        "revalidation": ns.revalidation,
+        "context": context.rstrip(),
+        "options": options.rstrip(),
+        "decision": decision.rstrip(),
+        "rationale": rationale.rstrip(),
+        "impact": impact.rstrip(),
+        "implementation": implementation.rstrip(),
+        "revalidation": revalidation.rstrip(),
     }
 
     canonical_empty_hash = fill_template(tpl, mapping)
