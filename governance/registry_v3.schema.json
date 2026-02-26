@@ -1,0 +1,15 @@
+﻿{
+  "schema": "mocka.keys.ed25519.registry.v3",
+  "version": 3,
+  "root_keys": [],
+  "operational_keys": [],
+  "policy": {
+    "require_active_keys": true,
+    "governance_event_required": true,
+    "key_version_monotonic": true
+  },
+  "meta": {
+    "created_at_utc": "",
+    "note": "Phase22 A1/A2 initial v3 schema"
+  }
+}

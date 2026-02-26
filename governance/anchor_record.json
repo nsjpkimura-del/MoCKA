@@ -1,0 +1,8 @@
+{
+  "schema": "mocka.governance.anchor_record.v1",
+  "anchor_type": "manual_external_post",
+  "sealed_summary_hash": "528e868c85099868aeb567054209ced8faee0d01df222457ad4ce16eef001836",
+  "sealed_at_utc": "2026-02-26T01:49:35Z",
+  "external_ref": "COMMIT_PENDING",
+  "note": "Paste a public proof reference here (e.g., GitHub commit URL, gist, tweet id, TSA receipt id)."
+}

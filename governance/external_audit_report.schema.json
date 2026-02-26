@@ -1,0 +1,10 @@
+﻿{
+  "schema": "mocka.external.audit.report.v1",
+  "audit_target_summary_hash": "",
+  "audit_timestamp_utc": "",
+  "auditor_id": "",
+  "verification_steps": [],
+  "result": "PASS",
+  "signature": "",
+  "note": "External auditor signed report interface"
+}

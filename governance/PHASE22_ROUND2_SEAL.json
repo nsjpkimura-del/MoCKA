@@ -1,0 +1,7 @@
+{
+  "phase": "Phase22-Round2",
+  "description": "Role policy + approval flow + revoke/governance signed + summary includes governance (private excluded)",
+  "sealed_summary_hash": "f8280860df97acd63d473e9e2619a1978b61b2a4a951d2f966cdc82313690724",
+  "sealed_at_utc": "2026-02-26T01:45:11Z",
+  "note": "Phase22 Round2 sealed"
+}

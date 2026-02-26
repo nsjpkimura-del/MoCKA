@@ -1,0 +1,9 @@
+﻿{
+  "schema": "mocka.external.anchor.record.v1",
+  "anchor_type": "manual",
+  "summary_hash": "",
+  "anchored_at_utc": "",
+  "external_reference": "",
+  "proof_material": "",
+  "note": "External time anchor interface (implementation-agnostic)"
+}

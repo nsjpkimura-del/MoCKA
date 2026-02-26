@@ -1,0 +1,9 @@
+{
+  "schema": "mocka.governance.revoke_event.v1",
+  "event_type": "key_revoke",
+  "key_id": "root_key_v1",
+  "reason": "private_key_unreadable_or_lost",
+  "authority": "root_key_v2",
+  "timestamp_utc": "2026-02-26T01:29:50Z",
+  "signature": "Gqu-YNI16yjzWFywkRgtLqa8rQqWLMJWMDEOGtiiQZ6i8g7eW50fWOoj0kMHhjgg5HTHAkalYDcxWRYUTgGlCA"
+}

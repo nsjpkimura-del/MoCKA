@@ -1,0 +1,26 @@
+﻿{
+  "schema": "mocka.keys.role.definition.v1",
+  "root_key": {
+    "purpose": "registry governance and structural changes only",
+    "allowed_events": [
+      "registry_update",
+      "key_revoke",
+      "key_rotate"
+    ],
+    "storage_policy": "offline_or_hardware",
+    "note": "root_key must never sign operational packs"
+  },
+  "operational_key": {
+    "purpose": "daily pack signing only",
+    "allowed_events": [
+      "pack_sign"
+    ],
+    "storage_policy": "online_controlled",
+    "note": "operational_key must never sign registry governance"
+  },
+  "approval_policy": {
+    "major_registry_change": "multi_approver_flow",
+    "minor_registry_change": "single_approver_flow"
+  },
+  "note": "Phase22 Round2: role policy fixed (crypto implementation deferred)"
+}

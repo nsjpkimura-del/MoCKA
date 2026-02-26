@@ -1,0 +1,17 @@
+﻿{
+  "schema": "mocka.keys.revocation.event.v1",
+  "event_type": "key_revoke",
+  "key_id": "",
+  "key_version": 0,
+  "reason": "",
+  "authority_level": "root",
+  "approvers": [],
+  "scope": {
+    "from_utc": "",
+    "to_utc": ""
+  },
+  "supersedes": null,
+  "timestamp_utc": "",
+  "signature": "",
+  "note": "Revocation must be recorded as event, not static flag"
+}

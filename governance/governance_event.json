@@ -1,0 +1,13 @@
+{
+  "schema": "mocka.governance.event.v1",
+  "event_type": "registry_update",
+  "change_class": "major",
+  "previous_registry_hash": "",
+  "new_registry_hash": "d7272a2019fa483651c1e2594005a261c486dc16d78dc84af9a651d1d05b684b",
+  "approvers": [
+    "kimura"
+  ],
+  "timestamp_utc": "",
+  "signature": "JBbB_I-FVk8ja8yVW9gzjhCcAPxCya-stcWRgXmxIzrtlJ0aaHl6iXrmo8hMyhiGjJ6C9FjKjHeZDNWWlEFCDQ",
+  "note": "Phase22 Round1 bootstrap governance_event (placeholder signature/timestamp)"
+}

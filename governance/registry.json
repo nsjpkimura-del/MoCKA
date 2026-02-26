@@ -1,0 +1,38 @@
+{
+  "schema": "mocka.keys.ed25519.registry.v3",
+  "version": 3,
+  "root_keys": [
+    {
+      "key_id": "root_key_v1",
+      "key_version": 1,
+      "public_key_b64u": "UPR00iDFc4M6uUFG75jN7YLiFfcxKk3srHuKu9bReUM",
+      "activated_at_utc": "2026-02-26T01:15:46Z",
+      "revoked_at_utc": "2026-02-26T01:29:50Z"
+    },
+    {
+      "key_id": "root_key_v2",
+      "key_version": 2,
+      "public_key_b64u": "Fnyp7H0Lnzu0i3cGC4cEC0XnZIXBQGszIt_7FIXEyUY",
+      "activated_at_utc": "2026-02-26T01:25:41Z",
+      "revoked_at_utc": null
+    }
+  ],
+  "operational_keys": [
+    {
+      "key_id": "operational_key_v1",
+      "key_version": 1,
+      "public_key_b64u": "c4qLV0Ih5YZSzp6MhDItV9os27jWSwYyJL0VOGKNg5o",
+      "activated_at_utc": "2026-02-26T01:15:46Z",
+      "revoked_at_utc": null
+    }
+  ],
+  "policy": {
+    "require_active_keys": true,
+    "governance_event_required": true,
+    "key_version_monotonic": true
+  },
+  "meta": {
+    "created_at_utc": "",
+    "note": "Phase22 A1/A2 initial v3 schema"
+  }
+}

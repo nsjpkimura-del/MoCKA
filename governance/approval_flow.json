@@ -1,0 +1,16 @@
+﻿{
+  "schema": "mocka.governance.approval.flow.v1",
+  "flows": {
+    "multi_approver_flow": {
+      "min_approvers": 2,
+      "required_roles": ["root_key_holder", "auditor"],
+      "note": "major registry changes require 2 approvals"
+    },
+    "single_approver_flow": {
+      "min_approvers": 1,
+      "required_roles": ["root_key_holder"],
+      "note": "minor non-structural updates"
+    }
+  },
+  "note": "Phase22 Round2: approval flow interface (crypto multisig deferred)"
+}
