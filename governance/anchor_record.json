@@ -1,8 +1,11 @@
-{
+﻿{
   "schema": "mocka.governance.anchor_record.v1",
   "anchor_type": "manual_external_post",
   "sealed_summary_hash": "9ac410876df109e3d8217d60cbb88c8303ec1611fdac26b0ca5b3b33092ce6c2",
   "sealed_at_utc": "2026-02-26T01:49:35Z",
   "external_ref": "https://github.com/nsjpkimura-del/MoCKA/commit/ae07bb79de82de264ad50f123b49c2aecadaceb5",
-  "note": "Paste a public proof reference here (e.g., GitHub commit URL, gist, tweet id, TSA receipt id)."
+  "note": "Paste a public proof reference here (e.g., GitHub commit URL, gist, tweet id, TSA receipt id).",
+  "external_ref_semantics": "sealing_commit_reference",
+  "sealing_commit": "7ae7c0d201c86c430999332df1a39bb52d41c7ef",
+  "summary_hash_spec_version": "1.0"
 }

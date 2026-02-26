@@ -35,7 +35,7 @@ def save_daily_signature(db_path, date_str, final_chain_hash, file_chain_length,
                 int(file_chain_length),
                 int(ledger_count),
                 signature_hex,
-                datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z",
+                datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds") + "Z",
             ),
         )
         conn.commit()

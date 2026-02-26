@@ -7,7 +7,7 @@ db = "audit.db"
 conn = sqlite3.connect(db)
 cur = conn.cursor()
 
-now = datetime.datetime.utcnow().isoformat()
+now = datetime.datetime.now(datetime.timezone.utc).isoformat()
 
 payload = {
     "key_id": "ed25519_20260220_01",

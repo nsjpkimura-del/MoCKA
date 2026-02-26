@@ -77,4 +77,4 @@ keys/private/
 !tools/**
 !docs/**
 !contracts/**
-!config/**
+!config/**.wsl_ots_venv/

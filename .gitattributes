@@ -1,4 +1,1 @@
-﻿* text=auto
-PHASE13A_CERTIFICATE.json text eol=lf
-seal_values.json text eol=lf
-verify_phase13b.ps1 text eol=lf
+﻿* text=auto eol=lf
