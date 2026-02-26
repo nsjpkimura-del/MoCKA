@@ -2,7 +2,7 @@
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 
 APPROVAL_FLAG = "governance/propagation/APPROVED_TO_SYNC.flag"
 PUBLIC_JSON = "governance/propagation/public_index_v1.json"
@@ -21,7 +21,7 @@ def is_approved() -> bool:
         return False
 
 def audit_log(approved: bool, target: str, count: int) -> None:
-    ts = datetime.utcnow().isoformat() + "Z"
+    ts = datetime.now(timezone.utc).isoformat().replace("+00:00","Z")
     line = f"{ts} approved={str(approved).lower()} target={target} count={count}\n"
     os.makedirs("governance/propagation", exist_ok=True)
     with open("governance/propagation/sync_audit.log", "a", encoding="utf-8-sig", newline="\n") as f:
@@ -42,5 +42,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
 
