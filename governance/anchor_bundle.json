@@ -1,0 +1,18 @@
+{
+  "bundle_hash": "6876d084164d5e5bec202879dbde387f8ab37e82ec0bc319a7abe4aff2657a35",
+  "primary_anchor": {
+    "ref": "18058140230fa4f42498e46e283261f7cd6c4de6",
+    "type": "git_commit"
+  },
+  "schema": "mocka.anchor_bundle.v1",
+  "secondary_anchor": {
+    "ref": "",
+    "type": "none"
+  },
+  "summary_hash": "528e868c85099868aeb567054209ced8faee0d01df222457ad4ce16eef001836",
+  "time_anchor": {
+    "ots_file": "governance/time_anchor/summary_hash.ots",
+    "status": "pending",
+    "type": "opentimestamps"
+  }
+}
