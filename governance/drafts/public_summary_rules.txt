@@ -1,0 +1,17 @@
+﻿- Public fields (Propagation):
+  - event_id
+  - date
+  - event_type
+  - title_20
+  - summary_100
+  - importance
+  - status
+  - canonical_path (optional)
+- Excluded:
+  - local paths
+  - secrets
+  - private notes
+  - attachments content
+- Rule:
+  - A/B only
+  - human approval gate required
