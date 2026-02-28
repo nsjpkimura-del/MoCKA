@@ -1,4 +1,6 @@
-﻿## Documentation
+﻿[Whitepaper v0.1](https://github.com/nsjpkimura-del/mocka-civilization/blob/main/WHITEPAPER_v0.1.md)
+
+## Documentation
 
 - [Architecture Overview](ARCHITECTURE.md)
 - [Threat Model](AI_ORCHESTRATION_THREAT_MODEL.md)
@@ -56,4 +58,5 @@ MoCKA アーキテクチャの公開検証レイヤーです。
 ---
 Part of the MoCKA Deterministic Governance Architecture.
 See Civilization layer for full structural doctrine.
+
 
