@@ -1,5 +1,7 @@
 ﻿[Whitepaper v0.1](https://github.com/nsjpkimura-del/mocka-civilization/blob/main/WHITEPAPER_v0.1.md)
 
+Minimal deterministic governance core.
+
 ## Documentation
 
 - [Architecture Overview](ARCHITECTURE.md)
