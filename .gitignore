@@ -1,52 +1,88 @@
-﻿# MoCKA ignore policy (operational noise)
+﻿# =========================
+# MoCKA public repo policy
+# =========================
+
+# ---- OS noise
+desktop.ini
+Thumbs.db
+
+# ---- python cache
 __pycache__/
 *.pyc
 
-# backups
-*.bak
-*.bak_*
-_untracked_stash_*/
-
-# local env
-.wsl_ots_venv/
+# ---- venv
 .venv/
 venv/
+.wsl_ots_venv/
 
-# runtime artifacts
-execution.lock
-execution.lock.json
-execution.lock.json.sig
+# ---- runtime artifacts
+*.log
+*.lock
+*.json.sig
 
-# operational outputs (keep out of public layer)
+# ---- secrets / keys
+secrets/
+keys/private/
+governance/keys/
+*.pem
+*.key
+*.pfx
+*.p12
+
+# ---- local databases
+*.db
+*.sqlite
+
+# ---- operational outputs (keep out of public layer)
 outbox/
 backup/
 audit/
 acceptance/
 inventory/
 infield/
+governance/propagation/*.log
 
-# logs
-*.log
+# =========================
+# Allowlist exceptions
+# =========================
+# Track only the Phase1 AI Save container (tools + specs + plans)
+!infield/
+!infield/ai_save/
+!infield/ai_save/bin/
+!infield/ai_save/specs/
+!infield/ai_save/plans/
 
-# secrets and keys (never public)
-secrets/
-keys/private/
-governance/keys/
-# windows noise
-desktop.ini
-
-# local scratch
-calc/
-governance/drafts/
-governance_phase16_upgrade/
-
-# local state markers
+# Never commit operational AI Save data
+infield/ai_save/items/
+infield/ai_save/index.csv
+infield/ai_save/decisions/decisions.csv
+# =========================
+# local-only artifacts (observed)
+# =========================
+_dump_key_metadata.py
+dump_db.py
+execution.lock.json
 last_event_id
 last_event_id.txt
 
-# local databases
-*.db
+_untracked_stash_*/
+calc/
+governance_phase16_upgrade/
+governance/drafts/
+governance/infield/calc/
 
-# local one-off tools (keep untracked during public optimization)
-_dump_key_metadata.py
-dump_db.py
+# backups
+*.bak_*
+*.bak
+
+# local copies / experiments
+memory/
+app/
+
+# large working trees kept private
+src/
+
+# historical backups
+main_loop.py.bak_*
+verify_full_chain_and_signature.py.bak_*
+keys/public_keys.json.bak_*
