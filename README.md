@@ -1,4 +1,22 @@
-﻿# mocka-transparency
+﻿## Documentation
+
+- [Architecture Overview](ARCHITECTURE.md)
+- [Threat Model](AI_ORCHESTRATION_THREAT_MODEL.md)
+- [Programs Reference](PROGRAMS.md)
+- [Security Policy](SECURITY.md)
+- [Contributing Guidelines](CONTRIBUTING.md)
+
+---
+
+## ドキュメント一覧（日本語）
+
+- [アーキテクチャ概要](ARCHITECTURE.md)
+- [脅威モデル](AI_ORCHESTRATION_THREAT_MODEL.md)
+- [プログラム一覧](PROGRAMS.md)
+- [セキュリティポリシー](SECURITY.md)
+- [貢献ガイドライン](CONTRIBUTING.md)
+
+---# mocka-transparency
 
 Public verification layer for the MoCKA architecture.
 
@@ -34,3 +52,4 @@ MoCKA アーキテクチャの公開検証レイヤーです。
 - マルチ観測者整合モデル  
 
 独立した暗号学的検証を歓迎します。
+
