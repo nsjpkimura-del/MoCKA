@@ -53,3 +53,7 @@ MoCKA アーキテクチャの公開検証レイヤーです。
 
 独立した暗号学的検証を歓迎します。
 
+---
+Part of the MoCKA Deterministic Governance Architecture.
+See Civilization layer for full structural doctrine.
+

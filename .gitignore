@@ -1,2 +1,14 @@
 ﻿calc/
 governance/drafts/
+__pycache__/
+*.bak_*
+*.db
+*.json
+*.lock
+outbox/
+backup/
+audit/
+governance/keys/
+secrets/
+_untracked_stash_*/
+.wsl_ots_venv/
