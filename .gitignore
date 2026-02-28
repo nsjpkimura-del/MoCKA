@@ -32,3 +32,21 @@ infield/
 secrets/
 keys/private/
 governance/keys/
+# windows noise
+desktop.ini
+
+# local scratch
+calc/
+governance/drafts/
+governance_phase16_upgrade/
+
+# local state markers
+last_event_id
+last_event_id.txt
+
+# local databases
+*.db
+
+# local one-off tools (keep untracked during public optimization)
+_dump_key_metadata.py
+dump_db.py
