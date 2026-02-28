@@ -18,23 +18,23 @@ flowchart TB
 
     B --> K["RFC3161 Timestamp Authority"]
     K --> L["Transparency Repo"]
-Layer Description
-INFIELD
+```
 
+---
+
+## Layer Description
+
+### INFIELD
 Primary structured records and deterministic reconstruction.
 
-OUTFIELD
-
+### OUTFIELD
 Cross-agent synchronization layer.
 
-Audit Backbone
-
+### Audit Backbone
 Append-only SHA256 chain with Ed25519 governance.
 
-Observer Layer
-
+### Observer Layer
 Continuous, cold-storage, and autonomous verification nodes.
 
-Transparency
-
+### Transparency
 Public proof repository with reproducible verification.
