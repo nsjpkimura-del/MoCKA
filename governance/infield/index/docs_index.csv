@@ -1,0 +1,3 @@
+﻿id,created_at_utc,author,title20,summary100,tags_5w1h,importance,link_type,link_target,source_ref,doc_type,version,supersedes_id,status,supersedes,verified
+doc_0001,2026-02-27T01:20:00Z,sirok,Phase24 Charter,Infield institutionalization charter document.,who:sirok what:charter why:governance where:governance/infield/docs when:2026-02-27 how:manual,A,file,governance\infield\docs\doc_0001.md,local,charter,1.0,,active,,
+doc_0002,2026-02-27T01:50:00Z,sirok,Outfield push audit,Outfield push audit log index entry.,who:sirok what:audit why:trace where:governance/infield/calc when:2026-02-27 how:auto,A,file,governance\infield\calc\outfield_push_audit.csv,local,auditlog,1.0,,active,,

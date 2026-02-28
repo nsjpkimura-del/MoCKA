@@ -1,0 +1,2 @@
+﻿id,created_at_utc,author,title20,summary100,tags_5w1h,importance,link_type,link_target,source_ref,inputs_ref,script_ref,outputs_ref,hash_fingerprint,verified,supersedes
+calc_0001,2026-02-27T01:30:00Z,sirok,Initial hash baseline,Initial hash fingerprint baseline for Phase24.,who:sirok what:hash why:verification where:governance/infield/calc when:2026-02-27 how:script,A,file,governance\infield\calc\calc_0001.py,local,governance\infield\docs\doc_0001.md,governance\infield\calc\calc_0001.py,console_output,79cba3fc420f9486718136a31521b93fbab941d3635d9d1e1570980c50963b51,true,

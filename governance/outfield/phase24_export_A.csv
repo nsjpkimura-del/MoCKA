@@ -1,0 +1,5 @@
+id,type,title20,summary100,link_target
+seed_0001,seeds,Phase24 start,Start seeds-first operation; create index and first canonical seed document.,governance\infield\seeds\seed_0001.md
+doc_0001,docs,Phase24 Charter,Infield institutionalization charter document.,governance\infield\docs\doc_0001.md
+doc_0002,docs,Outfield push audit,Outfield push audit log index entry.,governance\infield\calc\outfield_push_audit.csv
+calc_0001,calc,Initial hash baseline,Initial hash fingerprint baseline for Phase24.,governance\infield\calc\calc_0001.py
