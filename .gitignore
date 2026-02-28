@@ -1,14 +1,34 @@
-﻿calc/
-governance/drafts/
+﻿# MoCKA ignore policy (operational noise)
 __pycache__/
+*.pyc
+
+# backups
+*.bak
 *.bak_*
-*.db
-*.json
-*.lock
+_untracked_stash_*/
+
+# local env
+.wsl_ots_venv/
+.venv/
+venv/
+
+# runtime artifacts
+execution.lock
+execution.lock.json
+execution.lock.json.sig
+
+# operational outputs (keep out of public layer)
 outbox/
 backup/
 audit/
-governance/keys/
+acceptance/
+inventory/
+infield/
+
+# logs
+*.log
+
+# secrets and keys (never public)
 secrets/
-_untracked_stash_*/
-.wsl_ots_venv/
+keys/private/
+governance/keys/
