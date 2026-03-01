@@ -97,3 +97,6 @@ keys/public_keys.json.bak_*
 infield/ai_save/phase2/*.csv
 infield/ai_save/phase2/outbox.*
 infield/ai_save/phase2/manifest.*
+
+!infield/ai_save/phase2/outbox.manifest.chain.csv.asc
+
