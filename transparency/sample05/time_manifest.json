@@ -1,0 +1,9 @@
+﻿{
+  "target_file": "time_target.txt",
+  "target_sha256": "ba5d10a4f18c189306cd4066b509f446a8cc451eea829bda4dd43238fc884246",
+  "tsr_file": "response.tsr",
+  "tsr_sha256": "",
+  "tsa_cert": "tsa_cert.pem",
+  "algorithm": "sha256",
+  "standard": "RFC3161"
+}
