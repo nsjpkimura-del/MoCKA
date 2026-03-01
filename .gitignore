@@ -86,3 +86,14 @@ src/
 main_loop.py.bak_*
 verify_full_chain_and_signature.py.bak_*
 keys/public_keys.json.bak_*
+
+# NOTE: Phase2 container (public-safe) allowlist
+!infield/ai_save/phase2/
+!infield/ai_save/phase2/*.ps1
+!infield/ai_save/phase2/*.md
+!infield/ai_save/phase2/*.json
+
+# NOTE: Phase2 runtime artifacts must stay local
+infield/ai_save/phase2/*.csv
+infield/ai_save/phase2/outbox.*
+infield/ai_save/phase2/manifest.*
