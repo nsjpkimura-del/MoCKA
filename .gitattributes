@@ -1,14 +1,22 @@
-﻿# MoCKA line-ending policy (public layer)
-* text=auto eol=lf
+﻿# NOTE: line ending policy (public-safe normalization)
 
+* text=auto
+
+# PowerShell
+*.ps1 text eol=crlf
+
+# Markdown / Specs
 *.md text eol=lf
+
+# CSV / Schema
+*.csv text eol=lf
+
+# YAML / JSON
 *.yml text eol=lf
 *.yaml text eol=lf
-*.txt text eol=lf
 *.json text eol=lf
-*.toml text eol=lf
-*.ini text eol=lf
 
-*.ps1 text eol=crlf
-*.psm1 text eol=crlf
-*.psd1 text eol=crlf
+# Binary safety
+*.png binary
+*.jpg binary
+*.zip binary
