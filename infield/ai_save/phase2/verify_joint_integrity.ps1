@@ -10,7 +10,8 @@ $emit = Import-Csv $EmitPath
 $accept = Import-Csv $AcceptPath
 
 foreach($e in $emit){
-    $a = $accept | Where-Object { $_.emit_id -eq $e.emit_id } | Select-Object -First 1
+    # NOTE: acceptが複数ある場合は最後（最新）を採用する。append-only移管を許すため。
+    $a = $accept | Where-Object { $_.emit_id -eq $e.emit_id } | Select-Object -Last 1
     if(-not $a){ throw "HALT: missing accept record for $($e.emit_id)" }
 
     if($a.received_sha256 -ne $e.payload_sha256){
