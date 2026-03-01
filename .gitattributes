@@ -1,22 +1,5 @@
-﻿# NOTE: line ending policy (public-safe normalization)
-
-* text=auto
-
-# PowerShell
-*.ps1 text eol=crlf
-
-# Markdown / Specs
-*.md text eol=lf
-
-# CSV / Schema
+* text=auto eol=lf
+*.ps1 text eol=lf
+*.md  text eol=lf
 *.csv text eol=lf
-
-# YAML / JSON
-*.yml text eol=lf
-*.yaml text eol=lf
-*.json text eol=lf
-
-# Binary safety
-*.png binary
-*.jpg binary
-*.zip binary
+*.asc text eol=lf
