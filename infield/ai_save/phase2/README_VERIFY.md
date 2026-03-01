@@ -8,3 +8,7 @@ Verify chain ledger signature
 One-shot (PowerShell)
 - git tag -v public-safe-phase2-latest
 - gpg --verify infield/ai_save/phase2/outbox.manifest.chain.csv.asc infield/ai_save/phase2/outbox.manifest.chain.csv
+
+One-shot (PowerShell)
+- git tag -v public-safe-phase2-latest
+- gpg --verify infield/ai_save/phase2/outbox.manifest.chain.csv.asc infield/ai_save/phase2/outbox.manifest.chain.csv
